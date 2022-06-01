@@ -1,0 +1,1098 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Template for lab reports used at STIMA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sets the document class for the document
+% Openany is added to remove the book style of starting every new chapter on an odd page (not needed for reports)
+\documentclass[12pt,a4paper,english,oneside]{book}
+
+% DRAFT SETTINGS
+% \usepackage{draftwatermark}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Loading packages that alter the style
+\usepackage[]{graphicx}
+\usepackage[]{color}
+\usepackage{alltt}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[table]{xcolor}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+
+\usepackage{tabularx}
+
+% Set page margins
+\usepackage[top=1.5cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+
+% Package used for placeholder text
+\usepackage{lipsum}
+
+% Prevents LaTeX from filling out a page to the bottom
+\raggedbottom
+
+% Adding both languages, Swedish and English, so they can be used intermittently in for example abstracts.
+\usepackage[english]{babel}
+% \usepackage[german]{babel}
+
+% % Arial
+% \usepackage{fontspec}
+% \setmainfont{Arial}
+
+% Line spacing
+% Due to a different calculation method: Word spacing*1.2=Latex spacing
+% Word 1.5 = Latex 1.25
+\linespread{1.25}
+
+% Bibliography
+\usepackage[style=apa, sorting=anyt]{biblatex}
+
+% Plots and charts
+\usepackage{pgfplots}
+
+% Caption setup
+\usepackage[format=hang]{caption}
+
+% \usepackage[
+% backend=biber,
+% style=apa,
+% ]{biblatex}
+
+\addbibresource{bibliography.bib} %Imports bibliography file
+
+% Acronyms
+\usepackage[acronym]{glossaries}
+\makeglossaries
+% \newacronym{ict}{ICT}{Information and communications technology}
+
+% PDF import
+\usepackage{pdfpages}
+
+% All page numbers positioned at the bottom of the page
+\usepackage{fancyhdr}
+\fancyhf{} % clear all header and footers
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt} % remove the header rule
+\pagestyle{fancy}
+
+% Changes the style of chapter headings
+\usepackage{titlesec}
+\titleformat{\chapter}
+  {\normalfont\LARGE\bfseries}{\thechapter}{1em}{}
+% Change distance between chapter header and text
+% \titlespacing{\chapter}{0pt}{0pt}{\baselineskip}
+%\titlespacing{\section}{0pt}{50pt}{0.5\baselineskip}
+
+% No page break after chapters
+\renewcommand{\cleardoublepage}{}
+\renewcommand{\clearpage}{}
+
+% % Adds table captions below the table per default
+\usepackage{float}
+% \floatstyle{plainbottom}
+% \restylefloat{table}
+
+% Adds space between caption and table
+\usepackage[tableposition=top]{caption}
+
+% Adds table options
+\usepackage{booktabs}
+\usepackage{vcell}
+\usepackage{array}
+
+% More characters
+\usepackage{textcomp}
+
+% Umlaute
+\usepackage{listings}
+\lstset{ 
+  literate={ö}{{\"o}}1
+           {ä}{{\"a}}1
+           {ü}{{\"u}}1
+           {Ö}{{\"O}}1
+           {Ä}{{\"A}}1
+           {Ü}{{\"U}}1
+           {ß}{{\ss}}1
+}
+
+% Eqnuote
+\usepackage{csquotes}
+
+
+% Adds hyperlinks to references and ToC
+%\usepackage{hyperref}
+% \hypersetup{hidelinks,linkcolor = black} % Changes the link color to black and hides the hideous red border that usually is created
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+
+% Text boxes
+\usepackage[most]{tcolorbox}
+\newtcolorbox{linebox}{
+  breakable,
+  enhanced jigsaw,
+  oversize,
+  rightrule=0pt,
+  toprule=0pt,
+  bottomrule=0pt,
+  colback=white,
+  arc=0pt,
+  outer arc=0pt,
+%   title={Remarque :},
+%   title style={white},
+%   fonttitle=\color{black}\bfseries,
+%   titlerule=0pt,
+%   bottomtitle=0pt,
+%   top=0pt,
+%   bottom=0pt,
+  left=5pt,
+}
+
+% Epigraph quotes
+\usepackage{epigraph}
+
+% If multiple images are to be added, a folder (path) with all the images can be added here 
+\graphicspath{ {images/} }
+
+% Separates the first part of the report/thesis in Roman numerals
+\frontmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Starts the document
+\begin{document}
+
+%%% Selects the language to be used for the first couple of pages
+\selectlanguage{english}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% Adds the title page
+\begin{titlepage}
+	\clearpage\thispagestyle{empty}
+	\centering
+
+    ‍  % empty space
+	
+% 	\vspace{2.5cm}
+
+	
+    % Head
+    {\Large Bachelor's Thesis} \\
+    {\huge Digital Workplace Democracy:\\Assessing the value of digital participation in organizations} \\  % Title
+    
+    \vspace{0.6cm}
+    
+    % Author
+    {\normalsize presented by \\
+    \textbf{Alexander Clausen} \\   % Name
+    s73539@bht-berlin.de\\
+    877241} % Matriculation number
+    
+    \vspace{0.6cm}
+    
+    % Degree & Program
+    {\normalsize in partial fulfilment of the requirements for the degree of \\
+    \textbf{Bachelor of Science} \\    % Degree
+    in \\
+    \textbf{Business Administration - Digital Economy} \\
+    (Betriebswirtschaftslehre - Digitale Wirtschaft)} % Program
+    
+    \vfil
+
+    % University
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{BHT_Logo.png}
+    \end{figure}    % Logo
+    %\Large Berliner Hochschule für Technik \\    % University
+    {\normalsize Department I: Business Administration and Social Sciences}    % Department
+    
+    \vspace{1.5cm}
+    
+    % Details
+    {\normalsize Date of current draft: \today \\    % Date of Submission % CHECK
+    Supervisor: Prof. Dr. phil. Matthias Schmidt \\    % Supervisor
+    Examiner: Prof. Dr.-Ing. Alexander Huber}    % Examiner
+	
+\pagebreak
+\end{titlepage}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FRONT MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Separates the first part of the report/thesis in Roman numerals
+\frontmatter
+
+% Adds a table of contents
+\setcounter{tocdepth}{3} % CHECK auf 1 ändern
+
+{\hypersetup{allcolors=black}
+\tableofcontents{}}
+
+\newpage
+
+{\hypersetup{allcolors=black}
+\listoffigures{} \addcontentsline{toc}{chapter}{List of Figures}
+\listoftables{} \addcontentsline{toc}{chapter}{List of Tables}
+\printglossary[type=\acronymtype] \addcontentsline{toc}{chapter}{Acronyms}}
+
+
+\newpage
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MAIN MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mainmatter
+\chapter{Introduction} \label{ch:introduction}
+\section{Background of the topic}
+The way we work has been evolving for centuries. Technologies arise, societies change -- and so do economies and labor markets. Labor in advanced Western societies has become significantly more social, global, and digital in the last fifty years alone.
+Major phases in the way labor is conducted and seen in society are often associated with stages of the industrial revolution (\cite{FederalMinistryofLabourandSocialAffairs.2015}, pp. 34 ff.) Looking at the intervals between these phases, change is clearly accelerating. % Grafik/Tabelle
+
+Right now, a shift in values is very clear: many jobs with routine-intensive tasks can already be automated in many cases and this trend is expected to continue. Examples for jobs already affected or likely affected in the near future include low-skilled jobs featuring low-skilled activities as in the manufacturing sector as well as medium-skilled activities such as bookkeeping (\cite{FederalMinistryofLabourandSocialAffairs.2017}, p. 47). This automation can vastly improve efficiency but also has significant social effects. On the one hand, jobs become superfluous this way. On the other hand, however, many of these newly redundant jobs are often regarded as tiresome and unrewarding. This results in a paradigm shift placing more emphasis on education for high-qualification jobs. %check quellen
+
+% It also means that more people, especially younger generations, value meaningful jobs in an enjoyable work environment rather than only seeing work as an inevitable means to an end. 
+
+On a larger economic scale, many of the the jobs lost to developments such as automation and \acrshort{ai} are expected to be replaced by other jobs in sectors such as business services, education, \acrshort{ict}, the social and health sectors, and more (\cite{FederalMinistryofLabourandSocialAffairs.2017}, p. 52). Yet, this comes with immense challenges to affected workers whose qualifications do not match the requirements of newly created and vacant jobs. Additionally, the question arises whether new jobs will compensate those made redundant in the in the long run, meaning beyond the next decade. These are some of the reasons why the role of labor in general is generally in question for the first time in history. The public debate about \acrfull{ubi} is a striking example.
+
+Business areas like Research \& Development become more important as production is getting fast, easier, cheaper, and less reliant on human labor. Hence, employers increasingly require highly qualified, specialized, creative, and motivated workers in order to keep up with an extremely fast-paced economy. For this reason, work environments and conditions also change towards more participatory, flexible environments, including corporate policies allowing work from home, 4-day work weeks, flexible hours, and similar developments. % Quelle
+
+Another major shift in this environment is for organizations to become more democratic. As opposed to an upside-down leadership approach, giving employees a say in strategic business decisions can make them feel more empowered and more involved in their jobs. It can improve employees' performance as it is more motivating to work towards a goal that they have co-decided.
+
+Some organizations apply democratic practices to give employees a voice even beyond their operational day-to-day work, utilizing tools such as representative bodies, elected executives, or democratic votes on strategic decisions. These tools are analogous to democratic instruments in nation-states or other polities where they are proven concepts but also known to create problems, namely creating societal discords and being a massive bureaucratic burden. To lessen the latter, polities worldwide have started introducing tools of digital democracy in the past few decades. This can help make democratic processes more accessible and efficient.
+
+% CHECK sections über Problem und/oder Purpose?????
+
+\section{Structure and research questions}
+This thesis gives an introduction to both digital democracy and workplace democracy, focusing on their underlying concepts and core ideas, real-world examples, and benefits and challenges they entail. On this basis, the following central research question and sub-questions will be worked on:
+
+\item CQ: \textbf{What is the value of digital participatory measures for organizations based on a framework of criteria?}
+\begin{itemize}
+    \item SQ 1: What are formal criteria (prerequisites) for organizations and approaches?
+    \item SQ 2: What are potential approaches for Digital Workplace Democracy? (including Digital Democracy approaches applicable to organizational structures, existing Workplace Democracy approaches that can be digitalized, and new possible approaches)
+    \item SQ 3: How valuable are the expected effects for the organization, based on a set of evaluation criteria? (also taking into account the intended outcomes and the comparison to non-digital alternatives)
+    
+    % Sachen in Klammern so lassen???
+    
+    % ALT:
+    % \item SQ 1: Which approaches to workplace democracy can be digitalized?
+    % \item SQ 2: What other forms of digital democracy can be applied or translated to the organizational context?
+    % \item SQ 3: What are criteria to measure the value of digital participatory tools, if applicable in comparison to their non-digital alternatives?
+    % \item SQ 3: What are the expected effects of introducing instruments of Digital Workplace Democracy? (taking into account the intended outcomes and the comparison to non-digital alternatives)
+\end{itemize}
+
+Finally, these results will be summarized in the form of recommendations for action for organization executives and further discussed regarding its limitations and suggestions for further research to be conducted for more conclusive results.
+\newpage % CHECK ob noch nötig
+
+    % Wie sind die zu erwartenen Effekte für Organisationen zu bewerten? In der Konsequenz: Für welche Organisationen/organisationale Ziele könnten Maßnahmen der "Digital Workplace Democracy" geeignet sein?
+    
+    
+    % Welche Empfehlungen sind daraus für Organisationen abzuleiten, die über die Einführung von Maßnahmen der "Digital Workplace Democracy" nachdenken?
+
+
+\chapter{Democracy} \label{ch:democracy}
+The term \textit{democracy} derives from the two Greek words \textit{d{\=e}mos} (people) and \textit{kratos} (power) and therefore has the root meaning \textit{the power of the people} (\cite{Ober.2007}).
+
+% Athenian democracy
+The Athenian democracy is widely considered the world's first democracy. In this original form, major political decisions in the city of Athens were jointly made by the \textit{Ekklesia} (assembly) that consisted of all male Athenian citizens (\cite{Blackwell.2003}, pp. 3 ff.). The eligible population in the fifth century is estimated to have been 40,000 to 60,000 citizens (\cite{Blackwell.2003}, p. 8), making the Ekklesia a mostly impractical format, even though the percentage of eligible citizens actually attending the assembly was considerably lower.
+
+Although the idea of immediate participation in the political process is still a common element in modern-day democracies, the general understanding of the term \textit{democracy} tends to be broader. The understanding and design of modern democracies are very different from the ancient Athenian interpretation of democracy, however \enquote{the basic principles of freedom and direct involvement in one's own self government remain valid today.} (\cite{King.2006}, p. 16)
+
+There is no universal definition of democracy but both Schumpeter and Merriam designed popular definitions:
+
+% Schumpeter
+The Austrian political economist and Harvard University professor Joseph Alois Schumpeter defined the democratic method as \enquote{[...] that institutional arrangement for arriving at political decisions in which individuals acquire the power to decide by means of a competitive struggle for the people’s vote.} (\cite{Schumpeter.1947}, p. 250) % https://www.moadoph.gov.au/democracy/defining-democracy/#
+
+% Merriam
+Charles Edward Merriam Jr., an American professor of political science at the University of Chicago, however described democracy as \enquote{[...] a form of political association in which the general control and direction of the commonwealth is habitually determined by the bulk of the community in accordance with understandings and procedures providing for popular participation and consent.} (\cite{Merriam.1941}, p. 309) 
+
+% Aggregated definition
+\begin{linebox}
+In the context of this thesis, \textbf{democracy} is the entirety of all elements in a political entity (such as countries, states, or municipalities) that aim to provide citizens with opportunities to participate in administrative, legislative, and judicial processes, either directly or indirectly.
+\end{linebox}
+
+% Examples
+Typical examples for elements of direct democracy are general assemblies (typically on a municipal or sub-municipal level), referendums, or grand juries. Indirect democracy -- or representative democracy -- comprises elements in which the general public does not have a direct say in decisions but elects representatives to do so on their behalf. Common forms include elected legislators, government officials, or judges.
+
+% CHECK siehe meetings mit schmidt
+
+\chapter{Digital Democracy} \label{ch:digitaldemocracy}
+\section{Definition and purpose} \label{sec:digitaldemocracy_definition-purpose}
+
+% Definition
+\begin{linebox}
+\textbf{Digital democracy}, also known as \textbf{e-democracy} (in full \textit{electronic democracy}), is an umbrella term for innovations in the democratic process based on \acrshort{ict} (\acrlong{ict}). In this context, e-democracy instruments utilize \acrshort{ict} to strengthen the principles \enquote{participation,  inclusiveness,  efficiency,  effectiveness,  responsiveness,  transparency, openness and accountability} (\cite{CouncilofEurope.2020}, p. 6) of democratic tools or of a democratic system at large. It is, however, not to be interpreted as a standalone type of democracy but as a loose set of \acrshort{ict}-based  expansions to democracy.
+% http://www.publicus.net/articles/edempublicnetwork.html
+\end{linebox}
+
+% Functions
+The central functions of e-democracy instruments are:
+\begin{itemize}
+    \item \textbf{Information:} instruments that aim to transparently communicate (one-to-many or few-to-many) publicly relevant information, e.g. political parties' manifestos, contact information on politicians and candidates, information on democratic institutions, and publicly accessible political education in general (\cite{Kersting.2012}, pp. 23 ff.)
+    \item \textbf{Communication:} instruments that aim to improve communication among citizens or between citizens and a government, a political party, or a political candidate, e.g. e-mail, virtual conferences, discussion boards, or online commenting (\cite{Kersting.2012}, pp. 23, 25 ff.)
+    \item \textbf{Participation:} instruments that aim to enable and empower citizens to consult and influence government and legislative decisions, e.g. online voting, e-petitions, e-polling, online voter registration, or participatory budgets (\cite{Kersting.2012}, pp. 23, 28 ff.)
+\end{itemize}
+
+Access to these features can be strengthened in various ways. It is possible that there are no analog alternatives available (e.g. real-time communication such as live streams or chats), that analog alternatives would be hardly feasible on a large scale or at least significantly more expensive than digital options (e.g. newsletters or polls), or that digital solutions improve accessibility (e.g. online archives or contact information).
+
+Digital democracy does not only include solutions that are provided directly by the leadership of a polity (i.e. the government or administration) but also other tools developed and powered by political parties, \acrshort{pac}s, \acrshort{ngo}s, private businesses, educational and research institutions, individuals, et cetera. In a broader sense, sites such as social networks or blogs are also digital democracy tools when used by politicians, governments, or activists for political purposes (\cite{Timonen.2013}, p. 104), even though it may not be the website's original, intended, or sole purpose.
+
+\section{E-democracy and e-governance} \label{sec:digitaldemocracy_edemocracy-egovernance}
+E-governance (\textit{electronic governance}) is another term related to e-democracy. E-democracy is directly connected to digital approaches to the democratic process itself, whereas e-governance could be utilized in democratic as well as in totalitarian systems as it is focused on the digitalization of government services for the purpose of improving accessibility and efficiency of administrative bureaucracy (\cite{Kersting.2012}, p. 21).
+
+There are different models on how e-governance and e-democracy relate to one another. The \textit{complementary model} fundamentally argues that they are separate approaches although both are certainly compatible and e-governance is also conducive to democratization as it renders administrative processes more transparent and accountable (\cite{Fisher.2012}, p. 571). The \textit{evolutionary model} describes the digitalization of both administrative and democratic processes as cohesive development stages, meaning that the most developed stage of e-governance is a unified government portal offering not only a complex of government services but also the opportunity to comment on and discuss bills and vote online (\cite{Fisher.2012}, p. 571).
+
+Although some instruments may be difficult to assign to either e-governance or e-democracy, the focus of this thesis is on instruments that explicitly aim to foster the means of democracy as opposed to digitalizing typical services that would nowadays mostly be offered in residents' services offices, such as renewing a driver's license, registering a vehicle, or requesting a resident parking permit.
+
+\section{The use of digital democracy around the world} \label{sec:digitaldemocracy_aroundtheworld}
+In the following section, some different examples of digital democracy are provided and described. This is helpful to grasp the wide range of different expressions of digital democracy and their contribution to a democratic society.
+
+\subsection{\textit{i-Voting} in Estonia} \label{subsec:digitaldemocracy_aroundtheworld_estonia-ivoting}
+The Republic of Estonia has a very advanced interconnected infrastructure for digital citizen services. Estonians have an ID card that is not only a legal photo ID but also the central component of identification for online and offline services. It gives citizens access to digital services such as the national tax platform, health services and prescriptions, legally valid digital signatures, and many more e-governance services. In total, 99\% of public services are available electronically, with marriages and divorces being the only exceptions that need to be handled in person (cf. \cite{eEstonia.}).
+
+The secure verification infrastructure that can be accessed and used by every Estonian is also a major enabler for electronic voting. As the first country in the world, Estonia first offered internet voting for all eligible voters in local elections in 2005 and in national parliamentary elections in 2007 (\cite{SCOOP4C.2017}).
+
+Even seventeen years after the first election in Estonia with an internet voting option, the system called \textit{i-Voting} is still one among very few systems for national elections that allow electronic voting and Estonia remains the only country generally allowing it for all voters (\cite{Russel.2018}). As can be seen in Table \ref{tab:digitaldemocracy_aroundtheworld_estonia-ivoting_participation} on the example of national parliamentary elections, electronic voting has gained significant popularity among voters since its introduction.
+
+Two factors are most notable for the feasibility of the \textit{i-Voting} system.
+On the one hand, the high level of interoperability in the country's digital infrastructure. Identity verification and digital security measures do not need to be developed, optimized, and maintained solely for elections since a comprehensive infrastructure has already been established and in use in Estonians' lives for various other purposes. The specific development cost of electronic voting is therefore limited to the voting framework itself.
+
+On the other hand, trust is also a crucial aspect. Citizens do not just need to have trust in the security of the voting system but also in the government to maintain a database of citizens' information and the digital infrastructure in a secure and responsible manner (\cite{SCOOP4C.2017}). The Estonian approach to creating a secure, peer-reviewable, and therefore widely trusted infrastructure is to develop the technology as an open-source software the source code of which is publicly accessible (\cite{GitHub.2019}).
+
+\begin{table}[]
+\centering
+\begin{tabularx}{\textwidth}{X X X X}
+\toprule
+Election & Total votes cast & Electronic votes cast & Percentage of votes cast electronically \\ \midrule
+2019     & 565,045          & 247,232               & 43.8 \%                    \\
+2015     & 577,910          & 176,328               & 30.5 \%                    \\
+2011     & 580,264          & 140,846               & 24.3 \%                    \\
+2007     & 555,463          & 30,275                & 5.5 \%                     \\ \bottomrule
+\end{tabularx}
+\caption{Total and electronic votes in Riigikogu (the national parliament of Estonia) elections since 2007, when electronic voting was first made possible in a general election (Source: \cite{Valimised.2019})}
+\label{tab:digitaldemocracy_aroundtheworld_estonia-ivoting_participation}
+\end{table}
+
+% Probleme (in Vergangenheit?): https://jhalderm.com/pub/papers/ivoting-ccs14.pdf
+
+\subsection{Public protests against the 2019 \acrshort{eu} copyright reform} \label{subsec:digitaldemocracy_aroundtheworld_eu-copyright-protest}
+On April 17, 2019, the European Parliament passed the \acrshort{eu} Directive 2019/790 (\textit{Directive on Copyright in the Digital Single Market}). The directive intended to unify and modernize European copyright regulations aimed, among others, \enquote{to strike the right balance between the remuneration received by authors and performers and the profits made by internet platforms when they make their works accessible.}
+
+However, content creators in particular protested against parts of the controversial directive. More specifically, Article 17 of the directive essentially requires \enquote{content-sharing service providers} to prevent the publishing of copyrighted content (\cite{CounciloftheEU.2019}). Critics say the reformed copyright regulations will leave providers with no choice but to actively filter what users upload and therefore take down legitimately used content using sensitive algorithms (\cite{Fox.2019}).
+
+Creatives and content creators who make their living with content shared online protested against the EU proposition. They managed to influence many of their followers to join them. An online petition achieved over 5.3 million supporters (\cite{SaveTheInternet.}) and the vocal critics sparked protests with up to 40,000 participants in Munich (\cite{tagesschau.2019}). This extraordinary extent of support for protest against an inconspicuous EU directive was only possible because an online grassroots campaign enabled vocal critics to efficiently get their message out to large audiences.
+
+\subsection{E-Participatory Budgeting in Belo Horizonte} \label{subsec:digitaldemocracy_aroundtheworld_belohorionte-eparticipatorybudget}
+Participatory budgeting is a democratic practice allowing residents, typically of a city or municipality, to participate in the budgeting process. Residents have the opportunity to develop and present budgetary proposals, that fellow residents can vote on. The winning ideas will then be implemented by the government. The process is intended to allocate money to specific projects the local community deems most important. In most cases, only a relatively small percentage of the total budget will be allocated to ideas from the participatory budgeting process. % check/belegen!!
+
+The city of Belo Horizonte is the sixth-largest city in Brazil and the capital of the state of Minas Gerais. The city with a population of approximately 2.5 million (\cite{InstitutoBrasileirodeGeografiaeEstatistica.2020}) is one of the largest cities that maintain a participatory budgeting project, originally introduced in 1993. Although the number of participants could be increased from 15,216 in the first edition in 1994 to 38,508 in 1996, the participation has not gotten significantly higher since (as of 2014), peaking at 43,350 in the 2001/2002 edition (\cite{Coleman.2017}).
+
+To improve the participation especially of under-represented and politically uninvolved citizens in participatory budgeting processes, the local government started a new \acrfull{epb} project in addition to the existing face-to-face version (\cite{Coleman.2017}). The initiative was allocated a total of US\$ 11 million in addition to US\$ 43 million allocated to the face-to-face participatory budget in the 2006 edition (\cite{Peixoto.2009}).
+
+Only a small number of proposals suggested by residents of Belo Horizonte are pre-selected by the local government and refined to become feasible projects that can ultimately be voted on. Many residents expressed their disapproval of preselected projects (\cite{Coleman.2017}). Other residents voiced their disappointment with the project altogether, especially as some of the previously selected winning projects had not yet been concluded before approving of new projects (\cite{Porto.2020}).
+
+\subsection{\acrlong{pmo} Abgeordnetenwatch.de} \label{subsec:digitaldemocracy_aroundtheworld_abgeordnetenwatch}
+Another popular manifestation of digital democracy is the increasingly important role of \acrlong{pmo}s (\acrshort{pmo}s). Popular examples in the English-speaking world are GovTrack.us for the \acrshort{us} Congress or TheyWorkForYou.com for the \acrshort{uk} Parliament and the devolved legislatures of the constituent countries of the \acrshort{uk}. These organizations foster the transparency of the political work of \acrshort{mp}s in representative democracies by \enquote{monitoring and assessing the functioning of parliaments or their individual members, often seeking to facilitate and promote public knowledge of, and participation in, parliamentary processes.} (\cite{Agora.}) The main focus of the projects is to aggregate individual \acrshort{mp}s' voting behavior, e.g. by visualizing their accordance with their respective party lines and their attitude and consistency on specific policy matters (such as Brexit in the \acrshort{uk}), or by simplifying access to their voting history.
+
+Abgeordnetenwatch.de is another \acrshort{pmo} for \acrshort{mep}s from Germany and for \acrshort{mp}s of the German Bundestag (the federal parliament) and of the German state legislatures. In contrast to comparable organizations, Abgeordnetenwatch.de is also a major provider of political information in elections. Voters can not only view information and visualizations about parliamentarians' previous voting behavior but they can also ask questions and see other users' questions, the politicians' responses and statistics about their responsiveness on the platform. This is possible for both current \acrshort{mp}s and political candidates.
+
+All of the mentioned \acrshort{pmo}s are non-partisan \acrlong{ngo}s, thus politicians are free to choose whether or not to interact with voters on the platforms. Abgeordnetenwatch.de, however, is a trusted and long-standing organization and the best-established platform for digital interaction between politicians and voters in Germany. Therefore, if politicians choose not to respond to voter inquiries, it might be received as refusing to stand up for their remarks or voting behavior or at the least as not prioritizing communication with the constituents they ought to represent.
+
+\subsection{E-Petition against Brexit in the \acrshort{uk}} \label{subsec:digitaldemocracy_aroundtheworld_brexitpetition}
+One of the best-established forms of digital democracy is e-petitioning. A petition is a document delivering a request for a certain action, typically brought forward with expressed support from as many signers as possible. While petitions can be directed at any person or organization, the most common addressees are governments or legislatures.
+
+Many countries' legislatures have formalized procedures and permanent legislative committees to deal with petitions. To make it easier for citizens to start a petition or to see and support petitions, online petitioning has gained increased popularity in recent years. Petitions on private websites like \textit{Change.org} and other for-profit and non-profit services are quite commonly seen in social media. However, the more important e-petitioning services when it comes to requests for laws or government action are official online petitioning web portals as petitions on third-party websites are sometimes not considered by official bodies.
+
+While many legislatures in democratic countries have petitions committees and many have ways to submit petitions digitally, not all countries have official platforms to publicly share, view, and sign petitions. Legislatures that operate such a platform include the Assemblée nationale in France, the House of Commons in Canada, the Bundestag in Germany, and the European Parliament.
+
+Another example is the joint Petitions platform of the \acrshort{uk} Government and Parliament. Similar to some of the other previously mentioned examples, there are formal thresholds for petitions that need to be reached (\cite{UKGovernmentandParliament.}):
+\begin{itemize}
+    \item A minimum of 5 supports is necessary to create a petition
+    \item The Petitions Commitee reviews all published petitions (only excluding those that do not meet the standards) and can press for action from the government or Parliament
+    \item At 10,000 signatures, the government gives an official response to the request made in the petition
+    \item At 100,000 signatures, the petition will be considered for a debate in Parliament
+\end{itemize}
+
+One e-petition on the Petitions platform that gathered an extraordinary amount of support with 6,103,056 signatures, is the \textit{Revoke Article 50 and remain in the EU} petition (\cite{UKGovernmentandParliament.2019} -- making it the \enquote{the most popular petition to ever have been submitted on the UK Parliament's website - and historians say it is the biggest ever petition to parliament in history} (\cite{Cheung.2019}), The petition was referring to the \acrshort{eu} withdrawal process as formulated in Article 50 of the Treaty on \acrlong{eu}, which was triggered by the \acrlong{uk} after the 2016 Brexit referendum.
+
+The petition has gathered a number of notable supporters, including singer Annie Lennox, actor Hugh Grant, and \acrfull{snp} leader and First Minister of Scotland Nicola Sturgeon (\cite{Wilkinson.2019}). As the rate of signatures was unprecedented, the Petitions portal even crashed because of the petition (\cite{BBCNews.2019}).
+
+The petition was ultimately dismissed in Parliament by Conservative \acrshort{mp} Andrea Leadsom, then in her role Speaker of the House of Commons. She based the dismissal of the petition on the fact that it gathered far less support than the 17.4 million people who voted to leave the \acrshort{eu} in the 2016 referendum (\cite{Cheung.2019}). Even though the petition remained unsuccessful, an immense amount of public support had been gathered with close to 10\% of the British population and over 20\% in several constituencies such as Bristol, Cambridge, and in parts of London and Edinburgh (\cite{UnboxedConsulting.2019}).
+
+% https://petition.parliament.uk/archived/petitions/241584
+% https://en.wikipedia.org/wiki/Revoke_Article_50_and_remain_in_the_EU_petition
+% https://en.wikipedia.org/wiki/UK_Parliament_petitions_website
+% CHECK ergänzen
+
+
+
+\section{Gains of digital democracy} \label{sec:digitaldemocracy_gains}
+The usage of digital means to foster public information, communication, and participation in a democracy can have many positive effects for the democratization of the respective polity. These are the most crucial positive effects:
+
+\subsection{Transparency and accountability} \label{subsec:digitaldemocracy_gains_transparencyaccountability}
+With the internet, criticizing the government is not solely the responsibility of the organized political opposition and the mainstream media anymore. Not only has the media landscape in liberal societies changed through the addition of a wide range of online news sources. It has also gotten significantly easier for individuals to voice and spread one's opinion with the rising significance of social media. Governments are more directly accountable to their voters and have to act more transparently and keep them informed. \acrshort{pmo}s such as Abgeordnetenwatch.de utilize digital means to aggregate and visualize representatives' voting behaviors and to offer a platform for voters to publicly ask elected \acrshort{mp}s as well as political candidates their questions (see Section \ref{subsec:digitaldemocracy_aroundtheworld_abgeordnetenwatch}). This increases the pressure on politicians to communicate more transparently and allows constituents to hold their elected officials to account.
+
+\subsection{Convenience and accessibility} \label{subsec:digitaldemocracy_gains_convenienceaccessibility}
+Adding an online mode to democratic procedures such as elections, referendums, or ballot measures can simplify the process for voters. Empirical data shows that digital voting does not seem to significantly affect voter turnout at large. However, the willingness to vote of both occasional voters and abstainers can be increased by simplifying access, given also a heavy intensity of political campaigns (\cite{Petitpas.2021}). Additionally, among those who would otherwise have voted in person or by mail if there was no digital option, a large portion is willing to switch to online voting (see Table \ref{tab:digitaldemocracy_aroundtheworld_estonia-ivoting_participation}), implying their preference of a more convenient alternative.
+
+\subsection{Efficiency} \label{subsec:digitaldemocracy_gains_efficiency}
+Once successfully implemented and tested, digital democracy are in many cases much less time-intensive than analog alternatives, even though sustainable digital services require some amount of constant maintenance and further developing. For example in Estonia, government services are also - but not exclusively - available online (see Section \ref{subsec:digitaldemocracy_aroundtheworld_estonia-ivoting}). According to the Estonian government, the entirety of digital democracy and digital governance services save over 844 years of working times annually, and the country's \textit{i-Voting} system alone saves over 11,000 working days per election, even though the only 44\% of Estonian voters choose i-Voting (\cite{eEstonia.b}) and the country's population is relatively low with approximately 1.33 million Estonians (\cite{Statistikaamet.2021}).
+
+\subsection{Profound citizen participation} \label{subsec:digitaldemocracy_gains_participation} % grass-roots engagement, petitioning, votes, referendums
+One of the core goals of digital democracy is to enable citizens to directly participate in the decision-making process. Digital methods make frequent opinion polling or referendums much more feasible compared to cost-intensive alternatives such as physical or mail-in balloting. Participation forms such as petitions or grass-roots initiatives are much easier for citizens to spread widely using the internet. Subsequently, if ideas and opinions advocated for online are being taken up on by elected officials, digital democracy has the potential to lead to a system with democratic representation acting closer to the actual beliefs and demands of their constituents.
+
+
+\section{Challenges of digital democracy} \label{sec:digitaldemocracy_challenges}
+Despite the variety of positive effects that can improve democratic systems, digital democracy also entails a number of severe challenges. The most pressing challenges are:
+
+\subsection{Digital divide} \label{subsec:digitaldemocracy_challenges_digitaldivide} % inequal access to ICT, inequal IT literacy
+% 978-1-5095-3446-3
+The term \textit{digital divide} can be defined as \enquote{a division between people who have access and use of digital media and those who do not} (\cite{Bonfadelli.2002}). This includes a gap in access to \acrshort{ict} and particularly the internet, consisting of both technical (i.e. the availability of broadband) and social (i.e. professional knowledge, economic ressources, and technical skills required for effectual use) access (Kling 1999 via \cite{Wei.2011}).
+
+Many parts of the world have insufficient access to \acrshort{ict} which manifests in an extreme disparity in the percentage per country of individuals using the internet. As visualized in Figure \ref{fig:digitaldemocracy_challenges_MapInternetUsers}, the percentage of internet users is considerably lower in most developing countries than in developed countries. Most notably, the percentage of internet users of the the population in Sub-Saharan Africa is 18.7\% compared to 88.5\% in North America (\cite{WorldBankGroup.2019}). 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{IndividualsUsingTheInternet.png}
+    \caption{World map indicating the percentage of the population per country that uses the internet. The visualization uses the most recent data per country made available by the International Communication Union (via \cite{WorldBankGroup.2019}).}
+    \label{fig:digitaldemocracy_challenges_MapInternetUsers}
+\end{figure}
+
+In a democratic system in a country with poor access (both technical and social) to the internet, a high degree of digitalization of participatory tools would in many cases also entail a higher disparity in the access to democratic participation. Those without access to the internet would have higher barriers to vote in elections or referendums, they cannot communicate with politicians as easily, and even receiving updates on political debates and decisions is more complicated. As the access to internet is typically influenced by socioeconomic factors, this would mean that persons with a low socioeconomic status are less likely to be able to use the advantages of digital democracy. This hampers access to the democracy in its full scale.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{InternetIncomeUS.png}
+    \caption{Percentage of \acrshort{us} adults who say they have a broadband connection at home, by annual household income. The chart is based on survey data from \cite{PewResearchCenter.2021}.}
+    \label{fig:digitaldemocracy_challenges_InternetIncomeUS}
+\end{figure}
+
+The effect is likely to be most consequential in countries with a generally low number of internet users. However, even in countries such as the \acrshort{us} the digital divide should be taken into consideration. As visualized in Figure \ref{fig:digitaldemocracy_challenges_InternetIncomeUS}, the gap between the share of high-income and lower-income Americans using the internet has generally narrowed from 2000 to 2021. Yet, there is still a noticeable gap in 2021, with 99\% of Americans with an annual household income of at least \$75,000 versus only 86\% with an annual household income of less than \$30,000 (\cite{PewResearchCenter.2021}). Similar discrepancies can be seen between (sub-)urban and rural communities and between Americans on different educational levels. Table \ref{tab:digitaldemocracy_challenges_InternetNonvotersIncomeUS} shows the coherence between Americans with internet access and Americans who choose not to vote. More extensive digital democracy tools could even intensify this trend and increase political apathy among socioeconomic cohorts that are already underrepresented.
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{X X X X}
+\toprule
+                & Less than \$30,000 & \$30,000-\$74,999 & \$75,000+ \\ \midrule
+Internet access & 74\%               & 90\% \footnotemark          & 96\%      \\
+Nonvoters       & 46\%               & 27\%            & 18\%      \\ \bottomrule
+\end{tabularx}
+\caption{Comparison of the shares of adults from the \acrshort{us} who say they use the internet and nonvoters in the \acrshort{us} in the year 2013, by annual household income. The table is based on survey data from \cite{PewResearchCenter.2021, PewResearchCenter.2014}.}
+\label{tab:digitaldemocracy_challenges_InternetNonvotersIncomeUS}
+\end{table}
+\footnotetext{Due to differing categorization of the household income in the two used studies, this value could deviate slightly from the reality as it is the aggregated average of two categories within this range.}
+
+\subsection{Digital literacy and knowledge gap} \label{subsec:digitaldemocracy_challenges_digitalliteracyknowledgegap}
+The information function of digital democracy includes information from governmental institutions, \acrshort{ngo}s, political parties, and candidates, but also any information published by private companies and individuals not affiliated with any political body. As distributing information on the internet is mostly independent from limitations of resources, or transmission, far more people can actively publish information online than in traditional, analog media.
+
+Editors in their role as gate-keeping instance in traditional media do not exist in many online publishing channels, such as on social media platforms. This multitude of information available on the internet is also generally difficult to handle. Gaps in access, use, and skills in dealing with information on the internet accelerate gaps in knowledge, as visualized in Figure \ref{fig:digitaldemocracy_challenges_BonfadelliKnowledgeGapInternet} (\cite{Bonfadelli.2002}).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{BonfadelliKnowledgeGapInternet.png}
+    \caption{Consequences of the knowledge gap perspective for the internet.\\ Source: \cite{Bonfadelli.2002}, p. 73}
+    \label{fig:digitaldemocracy_challenges_BonfadelliKnowledgeGapInternet}
+\end{figure}
+
+The mostly unregulated spreading of publicly available information on the internet leads to a large amount of misleading, false, and unproven information. If these information are disguised as news and aim to push a certain agenda, to damage political opponents, or to simply create chaos, these are so-called \textit{fake news}. A study first published on July 12, 2020 explored the effects of fake news regarding the \acrshort{covid} pandemic. The study found that more than half (50.5\%) of the analyzed fake news stories were spread through social media as visualized in Figure \ref{fig:digitaldemocracy_challenges_CovidMisinformationSources} (\cite{Naeem.2021}).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{CovidMisinformationSources.jpg}
+    \caption{The sources of misinformation about COVID-19.\\ Source: \cite{Naeem.2021}}
+    \label{fig:digitaldemocracy_challenges_CovidMisinformationSources}
+\end{figure}
+
+Such fake news stories can heavily influence the public opinion and therefore have an effect on political decisions. In some cases, consuming fake news can lead to spiraling into conspiracy theories. For example, several conspiracy theorists including QAnon supporters took up the debunked idea that 5G radiation has caused the coronavirus (\cite{Naeem.2021,Broderick.2020}). Readers who believe these individual fake news may be attracted to conspiracy theories and more receptive for other components and false claims supporters of the respective theory spread.
+
+Jeff Johnson, a professor of Computer Science at the University of San Francisco, concludes the danger of false information as follows: \enquote{Today’s social media encourages the spread of unverified information, which can skew policymaking and elections. People tend to be lazy and do not even read most of the articles they comment on, much less check the truth of the articles. In the TV era, before social media, putting out false information about a political opponent or ballot measure was expensive and subject to laws against ‘false advertising.’ Political hit pieces had to be well-funded, vaguely worded and carefully timed (to just before the election) in order to sway elections. That is no longer true. Strong regulation of social media could perhaps mitigate this, but such regulation seems unlikely in the foreseeable future.} (\cite{Anderson.20200221})
+
+Finding the best solutions to societal issues in a civilized discourse as should happen in a democratic system requires a common base of facts. Communities of easily manipulable and uninformed or misinformed citizens is therefore a threat to democracy. For this reason, the increased danger of a spreading of false information in an increasingly digital society is a challenge that needs to be taken into consideration and addressed.
+
+
+\subsection{Complexity and trust} \label{subsec:digitaldemocracy_challenges_complexitytrust}
+The democratic process must be made as transparent and comprehensible as possible to its citizens. Electoral practices are subject to core principles to fulfill the promise of enabling citizens to make political decisions bottom-up, either directly or by electing representatives. These core principles are that elections \enquote{shall be by \textbf{universal} and \textbf{equal} suffrage and shall be held by \textbf{secret} vote or by equivalent free voting procedures} (Article 21, \acrlong{udhr}). Additional principles are set by many countries, many of which guarantee these rights in their respective supreme laws. Elections for the German Bundestag for example, in addition to the core principles as recorded in the \acrshort{udhr}, shall also be direct (Article 38, Basic Law for the Federal Republic of Germany/Grundgesetz für die Bundesrepublik Deutschland). National Council elections in Austria shall additionally be personal (Article 26, Federal Constitutional Law/Bundes-Verfassungsgesetz).
+
+Even though manual and analog election processes are prone to failure (unrecognizable ballot intentions by voters, counting mistakes by poll workers, etc.), the process is advantageous as the adherence to the previously mentioned election principles is easily comprehensible and transparent. Citizens who are worried about the integrity of election principles can choose to observe the conduction of an election in most democratic countries.
+
+Digitalizing the process and making it at least partly autonomous from human poll workers and manual counting makes this process less comprehensible and traceable for the average voter which might lower public trust in the democratic process.
+
+An example is the i-Voting system in Estonia (see Section \ref{subsec:digitaldemocracy_aroundtheworld_estonia-ivoting}). Members of the Estonian legislature, the Riigikogu, \enquote{are elected in \textbf{free} elections according to the principle of proportional representation. Elections are \textbf{general}, \textbf{uniform} and \textbf{direct}. Voting is \textbf{secret}} (§ 60, Constitution of the Republic of Estonia/Eesti Vabariigi põhiseadus). Table \ref{tab:digitaldemocracy_challenges_complexitytrust_estonia-election-principles} provides brief explanations for the core principles.
+
+\begin{table}[]
+\begin{tabularx}{\textwidth}{l X X l}
+\toprule
+\textbf{Election principle} & \textbf{Description}                                                 \\ \midrule
+free    & Voters can independently choose who to vote for or not to vote at all, without external influence or pressure \\ \hline
+general & Any citizen aged 18 or older is eligible to vote, regardless of gender, profession, income, beliefs, etc.     \\ \hline
+uniform (equal)    & Every vote is equal in weight                               \\ \hline
+direct             & There is no intermediate body, such as an electoral college \\ \hline
+secret             & No-one can observe any voter's choice                       \\ \bottomrule
+\end{tabularx}
+\caption{Election principles in the Republic of Estonia}
+\label{tab:digitaldemocracy_challenges_complexitytrust_estonia-election-principles}
+
+\end{table}
+
+In-person voting system is conceptually simple and the accordance to election principles is easily comprehensible. For example, voters mark their ballot choice in a segregated booth and drop their ballot into a ballot box where it remains until the voting period is over. This way, voters can be sure that the vote is secret. If they choose to watch the vote-tallying, they can assure themselves of the equality of votes.
+
+Electronic remote voting, on the other side, is not as tangible. Even though digital voting systems have the potential to be even safer and more accurate than hand-tallied voting systems, the system is complex and consists of many technologies (e.g. voter authentication, encryption, protocols, etc.). Even with publicly available and peer-reviewable open-source software, end users seldom have the knowledge or the capacity required to reassure themselves of its quality and security.
+
+Therefore, in order to have full trust in the digital voting process and software, users need to trust the governmental bodies to design a fair electoral system abiding to the core principles (see table \ref{tab:digitaldemocracy_challenges_complexitytrust_estonia-election-principles}) as well as government agencies and private organizations involved in the design, development, testing, operation, and evaluation of the technological components to create a secure and well-functioning electronic voting system (\cite{Ehin.2021}, p. 78). These parties include on the example of Estonia:
+\begin{itemize}
+    \item Commissioned companies, software developers
+    \item Server operators
+    \item Cyber security specialists
+    \item Ministry of Economic Affairs and Communications and other government bodies involved
+    \item The Estonian government at large
+    \item The electoral committee
+\end{itemize}
+
+\cite{Ehin.2021} argue that citizens tend to seek guidance from political elites they trust, especially on complex issues. In competitive democracies, this phenomenon most typically manifests in party attachment and taking cues from the preferred political party. The study confirmed the hypothesis that trust in the electronic voting system in Estonia is in fact highly influenced by the voters' party preference. This means that trust is significantly lower for voters of parties that oppose electronic remote voting than for parties supporting the system.
+
+This circumstance can be problematic if parties' stances towards digital democracy tools are not solely based on factual concerns of the security or integrity of elections but on political reasons (e.g. populism, general opposition to government activities in a divisive political culture).
+
+In the most recent presidential election in the \acrshort{us}, claims of former president Donald Trump and his Republican Party that there was a software glitch in certain voting machines (\cite{Giles.2020}) have led to many Republican voters questioning the integrity and the outcome of the vote at large. Even though the accusations have been debunked, the effect on public trust is a telling example for the issue of digital democracy tools being too complex to comprehend, making it easy to create distrust.
+
+
+\subsection{Security and privacy} \label{subsec:digitaldemocracy_challenges_securityprivacy}
+Data privacy in the context of democracy is almost exclusively extraordinarily sensitive. Not just in elections but also in referendums, opinion polls, and other votes could a security issue have drastic effects.
+
+In traditional hand-tallied elections, privacy protection is easy to reconstruct (see "Complexity and trust") but intentional manipulation or negligence of election workers can be a threat to the proper conduction of an election and tally. % Verweis
+
+First, vulnerabilities could lead to data leaks. If individually assignable voting data would be available to political candidates, parties or other domestic or international entities, these information could be used to manipulate specific voters in a more tailored way. Totalitarians and authoritarians could potentially even use these information for the persecution of political opponents.
+
+Second, other security issues might open an opportunity to directly manipulate the result of a vote. For example, if identity verification in a digital election can be bypassed, fake votes could be submitted to influence the election outcome. If undetected, this could lead to parties illegitimately taking power.
+
+Additional risks are also possible, including identity theft or blocking specific votes from being submitted.
+
+% CHECK (vllt Beispiele suchen)
+
+
+\subsection{Control and transparency of systems} \label{subsec:digitaldemocracy_challenges_controltransparency}
+A major aspect of concern when it comes to digital democracy is the control over used systems. Social networks and other platforms used for digital communication have previously been in the focus in this regard. % CHECK bsp finden (democratize fb?)
+Governments around the world are concerned about private companies providing these spaces, enforcing their own policies that may interfere with freedom of speech on the one hand and regulations against the spreading of misinformation on the other hand.
+
+In many cases, said private companies operate from other countries. This not only complicates efforts to regulate such guidelines on a legal level. It can also give the respective foreign government a handle on the information citizens do and do not receive -- which can be used to manipulate public opinions.
+
+Likewise, digital environments provided by and under the exclusive control of government bodies can be seen as similarly questionable. If systems are released as proprietary software and without options for the public to review the source code, systems could be flawed, malicious, or vulnerable.
+
+If, for instance, an online voting system was released under these conditions, no non-governmental parties had any way to review that the software casts and counts votes correctly, that votes cannot be viewed or changed by unauthorized persons (i.e. anyone except the voter), and that the system is not vulnerable to cyber attacks aiming to manipulate the tally.
+
+% CHECK/vervollständigen
+
+% Censorship
+% Government (was Finn meinte) UDN Social Media etc
+% https://www.pewresearch.org/internet/2020/02/21/concerns-about-democracy-in-the-digital-age/#empowering-the-powerful-corporate-and-government-agendas-generally-do-not-serve-democratic-goals-or-achieve-democratic-outcomes-they-serve-the-goals-of-those-in-power
+
+% (\cite{Timonen.2013}, pp. 106 ff.)
+% (\cite{Dai.2007})
+
+
+
+
+    % Welche Chancen und Risiken hat Digital Democracy in anderen Kontexten, insb. in politischen Entitäten (also Staaten, Bundesländer, Kommunen...)?
+    %     Chancen u.a.: einfachere Durchführung von Elementen direkter Demokratie, bessere Möglichkeiten zur Erfassung der Wünsche und Ängste der Bürger, mehr Ideen von Bürgern, besser Zugang zu Wahlen/Abstimmungen u.ä. --> höhere Partizipation
+    %     Risiken u.a.: Überforderung der Bürger, Benachteiligung einzelner Bevölkerungsschichten, Sicherheitsrisiko, Populismus kann u.U. direkter und schneller wirken
+
+
+
+
+
+
+
+
+
+\chapter{Workplace Democracy} \label{ch:workplacedemocracy}
+\section{Theoretical concept and Dahl's perspective} \label{sec:workplacedemocracy_theoreticalconcept-dahl}
+The political theorist and Sterling Professor of Political Science at Yale University, Robert A. Dahl, was a major defender of the concept of \textit{economic democracy}. Dahl proposed workplace democracy as a solution to corporate capitalism which he had previously described as a rising threat to free Western societies (\cite{Zirakzabeh.1990}, pp. 110 f.).
+
+Dahl essentially has five distinguishable reasons for his interpretation of the rise of corporate capitalism as a troublesome development:
+\begin{enumerate}
+    \item \textbf{Political influence:} Inequalities between corporations' managers and workers in terms of money, information, and status lead to unequal political influence as corporate representatives have considerable lobbying resources that workers do not have (\cite{Zirakzabeh.1990}, p. 113).
+    \item \textbf{Authoritarian hierarchy:} Similar to governmental policy decisions, decisions of businesses can have massive effects on many subordinates' lives. For this reason, he directly compares the organizational order in corporations to those in nation-states, coming to the conclusion that the top-down manner of decision-making (e.g. wages, prices, investments, hirings, firings, technological innovations) can be described as a tyranny with no room for affected people to oppose or safely resist the decisions (\cite{Zirakzabeh.1990}, p. 114).
+    \item \textbf{Low productivity:} Benefits such as job guarantees and high salaries and pensions allegedly protect managers from personal consequences of bad decisions, leading to decisions that are more focused on short-term career advancement as opposed to long-term well-being of the organization. Additionally, managers have minimal or no contact to the day-to-day business and the products or services. The combination of these two factors has led to a declining level of productivity in large corporations (\cite{Zirakzabeh.1990}, p. 114).
+    \item \textbf{Workers' demoralization:} According to Dahl, workers with no say in organizational policies, carrying out orders from managers with only minimum connection to the product, processes, or workers, tend to feel victimized and helpless in a workplace environment. This leads to decreasing pride, initiative, versatility, energy, productivity, enthusiasm, and creativity among workers (\cite{Zirakzabeh.1990}, pp. 114 f).
+    \item \textbf{Class struggle:} Dahl projected that corporate capitalism would ultimately cause emotional alienation and personal grievances, subsequently leading to polarization between classes. This development could go beyond the workplace, expressed in support for more radical political parties, not only endangering social peace but also encouraging authoritarian backlash (\cite{Zirakzabeh.1990}, p. 115).
+\end{enumerate}
+
+To combat these problems, Dahl came up with the idea of economic democracy as a solution to corporate capitalism. The core idea is that each worker in a firm legally owns shares of that firm and also has the right to help elect many of the firm's highest officers (\cite{Zirakzabeh.1990}, p. 117).
+
+Both factors combined -- employee ownership and participatory management -- appear to be particularly powerful to boost corporate performance while either approach alone achieves, at best, only spotty or short-lived results (\cite{NCEO.2018}; \cite{Winther.1999}).
+
+\begin{linebox}
+However, for the purpose of this thesis, the focus is on only one of the two aspects. As opposed to economic democracy which can be seen as a holistic concept to transform enterprises into democratic quasi-cooperatives, workplace democracy includes approaches that apply democratic practices, such as voting, debate, and participatory decision-making systems, to the workplace (\cite{CenterforLearninginAction.20210524}).
+\end{linebox}
+
+
+\section{Approaches to the democratization of the workplace} \label{sec:workplacedemocracy_approaches}
+\subsection{Classification of democratic approaches in the workplace} \label{subsec:workplacedemocracy_approaches_classification}
+Just as in political entities, workplace democracy can be approached in a direct or indirect (representative) way.
+
+In representative methods, employees vote to vote for people to delegate power to -- this can be either the power to represent employees' interests in codetermination bodies or direct decision power in the form of elections of executives.
+
+In contrast, direct methods are those that allow workers to influence and co-decide on subject-matter issues, such as major investment decisions, workplace guidelines, or the likes.
+
+% Indirect approaches democratize (to a varying extent) \textit{who} makes decisions while direct approaches democratize the decision-making process itself.
+Some of the following examples of direct and indirect approaches are well-established concepts (e.g. labor unions) and may even be required by law in some countries (e.g. works council). More radical concepts are typically still very uncommon and can only be found in certain individual companies.
+% CHECK Verweise auf die subsubsections unten
+
+% Information, Representation, Stakeholder
+
+\subsection{Representative participation} \label{subsec:workplacedemocracy_approaches_representative}
+\subsubsection{Labor unions} \label{subsubsec:workplacedemocracy_approaches_representative_laborunions}
+A labor union (also trade union or simply union) is an organization representing workers in a certain trade, especially those who are members of the labor union. The purpose of unions is to increase workers' bargaining power in negotiations with employers by organizing a large portion of employees working in that trade. Labor unions primarily negotiate labor conditions with employers' associations or individual employers on behalf of the union members. The negotiations typically aim to result in collective labor agreements, regulating labor conditions such as salary, working hours, paid vacation days, social security benefits, and more. Union funds are used to organize strikes among other measures to put pressure on the employer side.
+
+
+\subsubsection{Workplace codetermination in Germany} \label{subsubsec:workplacedemocracy_approaches_representative_workplacecodet}
+A works council represents the workforce of an individual operational workplace (e.g. a plant) of a company. Works councils can be found in different shapes or forms across different countries. A popular example is the \textit{Betriebsrat} in Germany. All German companies with an workforce of at least 5 \acrshort{fte} aged over 18 years are legally required to establish a works council (§§ 1 ff., Works Constitution Act/Betriebsverfassungsgesetz). Employees elect fellow workers as councilors to represent their interests on this body. The size of the council depends on the size of the workforce. Members have special privileges in order to be able to represent the workforce without any fear of facing consequences imposed by the management (§ 78, Works Constitution Act/Betriebsverfassungsgesetz). The main tasks for works councils include monitoring the compliance with labor laws and labor agreements, they have a say in social decisions such as those affecting labor conditions, recruitment and dismissal decisions, and other socially relevant issues (\cite{BundeszentralefurpolitischeBildung.2016}).
+
+
+\subsubsection{Board-level codetermination in Germany} \label{subsubsec:workplacedemocracy_approaches_representative_boardlevelcodet}
+A democratic principle common in companies around the world is codetermination on the company level. Not all countries legally require such a system, and those that do have different approaches. In Germany, corporations with a workforce of at least 500 employees are legally required to establish a supervisory board (\textit{Aufsichtsrat}) consisting to two-thirds of representatives of the company's shareholders and to one-third of employee representatives (§§ 1, 4, One-Third codetermination Act/Drittelbeteilungsgesetz). Corporations with over 10,000 employees need a supervisory board that equally represents shareholders and the workforce (§§ 1, 7, codetermination Act/Mitbestimmungsgesetz). The main tasks of members of supervisory boards include monitoring the management board (\textit{Vorstand}) and receiving regular management reports, appointing the management board and setting its pay, as well as far-reaching economic decisions that require action of the supervisory board (\cite{Fulton.2020}, p. 8).
+
+
+\subsubsection{Elected executives at Haufe-umantis} \label{subsubsec:workplacedemocracy_approaches_representative_execelections}
+A more radical approach compared to employees electing some kind of representation is electing the company leadership. Although this practice is still rare, a popular example is Haufe-umantis \acrshort{ag}. The Swiss \acrshort{hr} software company has been acquired by the German Haufe Group in 2012. Following the acquisition, the company's co-founder and then-CEO Hermann Arnold called held a democratic vote to select his successor (\cite{Arnold.2013}). Marc Stoffel won the election and was re-elected three times. The practice of democratically elected business executives adds a factor of accountability and ownership for the employees.
+
+However, the organization voted in 2019 to abolish the leadership elections and instead introduce a new decision-making model called Advice Process. The main reasons for leaving the democratic elections behind is that open feedback and the executives' ability to act and decide were impaired by the election (\cite{Rotzinger.2020}). % CHECK reference to negative points??
+
+\subsection{Direct participation} \label{subsec:workplacedemocracy_approaches_direct}
+\subsubsection{Advice process at Haufe-umantis} \label{subsubsec:workplacedemocracy_approaches_direct_adviceprocess}
+New models to empower employees in the workplace have risen in the most recent years. One concept is the the advice process as it has been introduced at Haufe-umantis \acrshort{ag} as a replacement for its democratically elected leadership.
+
+Rather than voting for executives who keep having superordinate decision-making power, this new process ought to enable every employee to independently enact policies at their workplace without formal decision-making power. For instance, the Haufe-umantis employee Verena Köppel introduced a work-from-home mandate for all employees before the Swiss or cantonal government enacted any regulations of the kind. Even though she had no formal responsibility or management position at the time, she suggested the idea and asked her colleagues for advice and feedback, especially those who are experts in the matter. Since the feedback was positive, she was able to enact the policy independently -- and on her own responsibility (\cite{Bos.2020,Rotzinger.2020}). The concept can be seen as a hybrid of democratic participation (as everyone can bring in ideas and enact them on one's own account) and technocracy (as internal or external experts have to be on board with the idea). However, traditional executives co-exist with the advice process. The continue making most day-to-day decisions. They are not democratically elected as they were before but appointed by the board (\cite{Bos.2020}).
+
+
+\subsubsection{The Semco philosophy} \label{subsubsec:workplacedemocracy_approaches_direct_semco}
+Brazilian businessman Ricardo Semler took over his father's traditional manufacturing business Semco \acrshort{sa} in the 1980s, at the brink of bankruptcy and amid a period of hyperinflation in Brazil. Throughout the years, he introduced a new leaner corporate structure, made to foster employee participation.
+
+Semler found that size, hierarchy, lack of motivation, and ignorance are the four biggest obstacles to effective participatory management. Therefore, the new structure he introduced is a circle rather than a pyramid. A small circle is the corporate circle and only comprises of five experienced managers called \textit{Counselors}. The second circle consists of the heads of every business division, called \textit{Partners}. The last circle contains the whole rest of the workforce. They contain \textit{Associates} working on operative tasks as well as some \textit{Coordinators} leading teams or tasks either permanently or temporarily.  % CHECK Grafik anfertigen (schon angefangen am Laptop in Photoshop)
+Another principle is that those employees whose knowledge and experience is worth more to the company are also paid more. This means that oftentimes associates have higher salaries than the coordinators and partners they report to.
+
+A layer of accountability is added through the hiring and promotion process at Semco: every prospective new hire or promotion has to be interviewed and accepted by all their future subordinates. Major business decisions are also made in an democratic manner. Semler mentioned the acquisition of a new factory for which the whole workforce was bused to three potential properties to view them. The employees chose a plant the Counselors did not want but the company bought the plant and let the employees design the layout of their manufacturing system in the new plant.
+
+Other components of the philosophy include transparent and easily comprehensible business reports, a profit-sharing program, and a high amount of freedom, trust, and flexibility at work (\cite{Semler.1989}).
+
+
+\subsubsection{Democratic salary negotiations at 10Pines} \label{subsubsec:workplacedemocracy_approaches_direct_10pines}
+10Pines is an Argentinian software company that works with a sociocratic culture based on Ricardo Semler's ideas. A core feature of their interpretation is to let employees decide over everyone's salaries. All employees except for new hires still on probation can ask for a raise in three annual \textit{rates meetings}. The raise is then openly discussed within the workforce. Therefore, every employee receives a salary that is regarded fair among the workforce. Whoever feels their own income is out of balance with their colleagues' salaries can come forward with an quest for a pay rise.
+
+Additionally, the organizational structure at 10Pine is similar to the one at Semco, they have also introduced a consent-based hiring process, and trust the employees' ability to think and work on their own account (\cite{Shaw.2021}).
+
+
+\subsubsection{Mondragon worker cooperatives} \label{subsubsec:workplacedemocracy_approaches_direct_mondragon}
+The Mondragon Corporation may be one of the most successful and most holistic examples of an democratically led and collectively owned organization. The enterprise based in the Basque Autonomous Community in Spain is a \enquote{collective of self-managing and legally independent co-operatives} (\cite{MondragonCorporation.2021}). The group is comprised of 95 cooperatives and 79,931 employees working in the group's key areas industry, retail, finance, and knowledge (\cite{MondragonCorporation.MediaKit}).
+
+Mondragon claims in its mission that it is \enquote{driven by a commitment to solidarity, applying democratic methods in its organisation and management} and \enquote{boosts people’s engagement and involvement in the management, performance and ownership of its companies} (\cite{MondragonCorporation.2019}). Mondragon works on the basis of its 10 basic principles (\cite{MondragonCorporation.2019}):
+\begin{enumerate}
+    \item \textbf{Free adherence:} Openness to anyone who accepts the principles
+    \item \textbf{Democratic organization:} \enquote{One person, one vote} system as principle for elections of governing bodies and democratic decisions on important issues
+    \item \textbf{Sovereignty of labor:} Profit allocation based on the work contributed
+    \item \textbf{Instrumental and subordinated nature of capital:} The capital factor is subordinated to labour and does not confer the right to vote
+    \item \textbf{Participation in the management:} Members are involved in managing the business
+    \item \textbf{Wage solidarity:} Wages are in accordance with the cooperative's possibilities
+    \item \textbf{Inter-cooperation:} Mechanism for solidarity between cooperatives and business efficiency
+    \item \textbf{Social transformation:} Contribution to the development of the local area
+    \item \textbf{Universality:} Support of economic democracy and the international cooperative movement
+    \item \textbf{Education:} Promotion of the education and development of Mondragon members and the public
+\end{enumerate}
+
+It must be noted that the Mondragon Corporation is not the owner or parent company of its affiliated cooperatives but rather functions as an agreement to share certain management areas (\cite{Forcadell.2005}, p. 258) to promote the principles mentioned above. For this purpose, inter-cooperative training facilities are set up, notably including the degree-awarding private cooperative university Mondragon Unibertsitatea (\cite{MondragonUnibertsitatea.Cooperative}). The Corporation also has a network of 15 \acrshort{r&d} centers to foster innovation in the group (\cite{MondragonCorporation.MediaKit}). The individual cooperatives that are affiliated with the Mondragon group are also owned and managed democratically within the frame of their individual structures.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{Forcadell2005_Mondragon-Structure.png}
+    \caption{The organizational structure of Mondragon Corporation.\\ Source: \cite{Forcadell.2005}, p. 258}
+    \label{fig:workplacedemocracy_approaches_direct_mondragon_structure}
+\end{figure}
+% CHECK rausfinden warum die caption hier zentriert ist??
+
+The group features an organizational structure of governing bodies with representatives from its affiliated cooperatives. There are three central governing bodies within the Mondragon Corporation as visualized in Figure \ref{fig:workplacedemocracy_approaches_direct_mondragon_structure}:
+\begin{itemize}
+    \item The \textbf{Cooperative Congress} is the primary body of sovereignty and representation within the corporation, consisting of a maximum of 650 delegates from all affiliated cooperatives. It is responsible for approving the General Policies and the Corporate Strategic Plan, and for updating the Basic Principles and Corporate Values (\cite{Forcadell.2005}, p. 259).
+    \item The \textbf{Permanent Commission} is comparable to a board of directors or the supervisory board as described in section \ref{subsubsec:workplacedemocracy_approaches_representative_boardlevelcodet}. It consists of 18 elected members. It acts on behalf of the Cooperative Congress and its main tasks are to \enquote{drive and control the implementation of policies and agreements adopted by the Cooperative Congress, continuously monitoring the Group’s development and the management of the General Council Presidency, and the coordination of the different sectorial activities} (\cite{Forcadell.2005}, p. 259).
+    \item The \textbf{General Council} is the executive body, led by the president. Its members are named by the Permanent Commission. It is responsible for \enquote{the elaboration, proposal to the Permanent Commission and application of the corporate strategies and objectives, coordinating and controlling the strategies of the different divisions, sectorial clusters and cooperatives} (\cite{Forcadell.2005}, p. 259).
+\end{itemize}
+
+In core, Mondragon and its affiliated cooperatives are not just managed democratically but also owned democratically as proposed by Dahl in his concept of economic democracy (see section \ref{sec:workplacedemocracy_theoreticalconcept-dahl}), making it the most holistic approach to Workplace Democracy presented in this thesis.
+
+Mondragon Corporation is often named as a prime example for worker cooperatives or for workplace democracy at large. The principles, values, and mission as well as the structure of the group are continuously evolving to properly represent the will of the employees of the federation. Furthermore, it is one of the most successful enterprises in Spain as several of the Mondragon cooperatives are leading companies in their field, including bicycle manufacturer Orbea and the Spanish supermarket chain Eroski. Mondragon shows that democratic principles can successfully work in a business context to a high degree, even on a large scale.
+
+
+\section{Arguments for Workplace Democracy} \label{sec:workplacedemocracy_arguments}
+% (\cite{Foley.2006}) %CHECK die Aufzählung rausnehmen
+% \begin{itemize}
+%     \item Economic Argument (p 175) --> improved morale, productivity
+%     \item Citizenship Argument (p 176)
+%     \item Ethical Justification (p 176) --> 
+%     \item Health-Based Argument (p 178) --> decision latitude, job security, work-life balance --> lower employee turnover
+%     \item Employee Rights Movement (p 182) --> public reputation
+% \end{itemize}
+
+\subsection{Economic Argument} \label{subsec:workplacedemocracy_arguments_economic}
+Although conclusive field studies on the economic effect of workplace democracy remains rare, research suggests an effect on the organizational outcome (\cite{Foley.2006}). Experiences made in democratically structured organizations as presented in section \ref{sec:workplacedemocracy_approaches} -- most notably the Mondragon Corporation presented in section \ref{subsubsec:workplacedemocracy_approaches_direct_mondragon} -- shows the potential for successful, profitable outcomes.
+
+The economic effects of Workplace Democracy can be different in nature. Measures that, for instance, allow workers to co-design their workplace and processes may lead to more effective operational workflows. Other measures can affect workers' morale.
+Some methods have a stronger impact on morale than on productivity or vice versa (Sagie and Koslowski 2000 via \cite{Foley.2006}) while others have these positive effects while coming along with high attrition rates or little long-term feasibility (Ostermann 2000 via \cite{Foley.2006}).
+Other economic benefits despite an immediate effect on the organizational outcome can include an increased openness to change, lower absence rates due to work-induced health issues (see section \ref{subsec:workplacedemocracy_arguments_health}), and others.
+
+\subsection{Citizenship Argument} \label{subsec:workplacedemocracy_arguments_citizenship}
+Another argument is that the workplace is a highly significant place for workers to \enquote{develop the individual attitutdes and psychological qualities necessary for broader and more genuine political democracy [...].} Since workers spend a considerable part of their lives at the workplace, having control and experiencing participation in this domain also increases the understanding of democratic participation as a duty and right of citizenship in a broader societal context. Hence, the values and skills developed by participating in the workplace also extend into the political domain where they \enquote{form the basis of a functioning democracy} (\cite{Foley.2006}).
+
+\subsection{Ethical Justification} \label{subsec:workplacedemocracy_arguments_ethical}
+In a similar manner, Robert A. Dahl (see section \ref{sec:workplacedemocracy_theoreticalconcept-dahl}) argues that \enquote{\textit{if} democracy is justified in governing the state, it must \textit{also} be justified in governing economic enterprises,} citing a universal moral right to autonomy manifested in having a voice in the firm (Dahl 1985 via \cite{Foley.2006}, pp. 176 f.). Although opponents argue on philosophical, legal, and practical grounds against an ethical obligation to give employees a voice beyond their own work, others agree with Dahl and argue with a \enquote{moral right to a humane, non-alienating work environment} (\cite{Foley.2006}, p. 177)
+
+\subsection{Health-based Argument} \label{subsec:workplacedemocracy_arguments_health}
+A survey on work and well-being commissioned by \acrshort{apa} in the \acrshort{us} in 2021 found that more than 71\% of those workers who feel tense or stressed out during the workday intend to seek employment elsewhere in the next year, compared to only 20\% of those who do not typically feel tense or stressed out (\cite{AmericanPsychologicalAssociation.2021}). The considerable costs of attrition is not the only thing employees need to consider economically. According to the \citetitle{MindSharePartners.2021}, 77\% of the American respondents say that their productivity at work was impacted by their mental health, most commonly manifesting in difficulties concentrating (38\%), avoiding social activities (32\%), difficulties thinking, reasoning or deciding (24\%), being less responsive to email and other communications (23\%), and taking longer to do tasks (21\%) respectively (\cite{MindSharePartners.2021}, p. 13). Additionally, respondents were absent due to sickness for an average of 8 working days in a year, accounting for an 85\% increase compared to an average of 4.3 days in the 2019 edition of the Report (\cite{MindSharePartners.2021}, p. 14).
+
+Workplace Democracy can help reduce these costs while naturally also increasing the workplace attractiveness of the employer and -- apart from economic factors -- the quality of work and life for employees. While many aspects can factor into work-induced mental health issues, the \textcite{AmericanPsychologicalAssociation.2021} identified low salaries (56\%), long hours (54\%), lack of opportunity for growth or advancement (52\%), too heavy of a workload (50\%), lack of paid time off or sick leave (50\%), and commuting (50\%) as the most significant workplace stressors. Except for commuting, all of these aspects would more likely be addressed if the workforce were more involved in the process of designing their own workplace and fair labor conditions. 48\% of employees said a lack of involvement in decisions itself is a very or somewhat significant contributor to stress in the workplace (\cite{AmericanPsychologicalAssociation.2021}), showing a high demand among employees for a more democratic workplace.
+
+% \subsection{Employee Rights Movement} \label{subsec:workplacedemocracy_arguments_employeerightsmovement}
+
+
+\section{Possible issues of Workplace Democracy} \label{sec:workplacedemocracy_issues}
+
+
+\subsection{Sizeable organizational units and hierarchy}
+Ricardo Semler identified some \enquote{big obstacles to effective participatory management} (\cite{Semler.1989}), the first one being size. While Semler says that there are also limits to how many very small teams can effectively work together, he claims that very large units of several thousands employees make individual involvement an illusion, saying that people in a large unit \enquote{feel tiny, nameless, and incapable of exerting influence on the way work is done or on the final profit made} (\cite{Semler.1989}).
+
+Additionally, preexisting power structures intensify this issue. Managers refusing to give up power and let their employees make decisions is another major obstacle. Many businesses would likely face resistance from previous managers whose roles and powers would be under jeopardy with typically necessary reorganization efforts when transitioning to a democratic workplace. 
+
+% bessere Visualisierung von Ergebnissen auch in größeren Organisationen/Einheiten
+% Digitale Führung als Grundlage - hat wenig direkt damit zu tun aber Leadership sollte heute sowieso anders aussehen
+
+
+
+\subsection{Impaired decision-making ability through democratic accountability} \label{subsec:workplacedemocracy_issues_accountability}
+If workplace democracy manifests in a representative model that is as far reaching as the former Haufe-umantis leadership model elaborated in section \ref{subsubsec:workplacedemocracy_approaches_representative_execelections}, the same problems apply that can also be observed in representative democratic systems in the political sphere. One major problem is that elected officials sometimes tend to avoid decisions with effects that are unpopular with their electorate. If a democratic representative faces re-election and sees it jeopardized, they might decide in favor of inferior alternatives with a positive or neutral short-term effect rather than more sustainable decisions that have considerably better long-term effects but unpopular immediate effects (such as increased taxes, energy prices, or social security contribution). % CHECK quelle
+
+Likewise, elected business leaders may feel they cannot make the decisions that they think are best for the business because they are immediately accountable for their actions and cannot make decisions that are majorly unpopular among the electorate if they want to be re-elected or even to progress into higher positions. Haufe-umantis co-founder \textcite{Arnold.2020} describes that some leaders feel the \enquote{tyranny of employees.} Haufe-umantis board member \textcite{Rotzinger.2020} also writes that executives were afraid of being punished by the voters for unpopular decisions.
+
+% Online-Portal für anonymes Feedback
+% Petitionen um Dinge zu verändern (verbindlich?)
+
+
+
+\subsection{Limiting feedback and participation to the ballot} \label{subsec:workplacedemocracy_issues_feedbackculture}
+The issue depicted in section \ref{subsec:workplacedemocracy_issues_accountability} is even intensified by a shift in the feedback culture. Regular top-down management cultures often lack ways for employees to feel safe about criticizing their superiors without fearing consequences for their job. However, if employees can express their disapproval in a democratic vote, this might also negatively affect the general feedback culture. In his memo, Arnold argues that \enquote{people just vote out leaders without even giving feedback/reasons on the voting ballot. Not to talk about going into conflict to improve a situation midterm} (\cite{Arnold.2020}).
+
+This might possibly lead to people coming to terms with just voting for the candidate aligning most closely with their own ideas rather than working out solutions and contributing. This is in line with Arnold's description of \enquote{a stronger participation from bottom up but also from top down} (\cite{Arnold.2020}) back when the team was smaller and had no elections.
+
+
+\subsection{Entitlement argument against Workplace Democracy}
+A position directly opposing the ethical justification for workplace democracy as described in section \ref{subsec:workplacedemocracy_arguments_ethical} is that business owners simply are entitled to the power they hold for various reasons. Other than employees, they have greater stake in the success of their business. The argument is that employees voluntarily trade their labor for money and that they are able to withdraw from that contract at any time. Hence, the business owners who risk their capital are the ones who should make the decision over how the employees' labor is used (\cite{Foley.2006, p. 177.}).
+
+Furthermore, opponents argue that there is not enough time to involve workers in all or many decisions in the current rapidly changing environment and that employees may be unable to make meaningful contributions to higher-level decisions as they lack the necessary expertise (Poole, 1986 via \cite{Foley.2006}, p. 177).
+
+
+% \cite{Frega.2019} falls noch mehr fehlt
+
+
+
+% \begin{itemize}
+    % \item \cite{Rotzinger.2020, Arnold.2020}: Executives' ability to act and decide impaired by too much accountability
+    % \item \cite{Rotzinger.2020}: Feedback culture shifts from an open culture to democratic votes % siehe nächstes
+    % \item \cite{Arnold.2020}: Participation (especially in discussions outside of elections) is worryingly low (employees carry their frustrations right to the ballot rather than discussing them) % (quasi dasselbe wie davor)
+    % \item \cite{Arnold.2020}: Customers/clients as a vital part of the company are by design not included in the democratic process
+    % \item \cite{Arnold.2020}: Option of voting out without concrete alternative candidates leads to months-long vacancies
+    % \item \cite{Semler.1989}: Four big obstacles to effective participatory management: size, hierarchy, lack of motivation, and ignorance
+    % \item \cite{Foley.2006}, p. 177: Accountability argument, employees voluntarily trade their labor for money
+    % \item \cite{Foley.2006}, p. 177: Rapidly changing decision-making environment, lack of expertise
+
+% \end{itemize}
+
+
+
+
+
+
+
+
+
+\chapter{Digital Workplace  Democracy} \label{ch:dwd}
+\section{Idea and purpose of Digital Workplace Democracy} \label{sec:dwd_ideapurpose}
+The core idea of Digital Workplace Democracy is to gather ideas and established practices in the Digital Democracy field in the political sector and translate them for meaningful usage in the economic sector. The underlying purpose is to eliminate or lower the issues and disadvantages of Workplace Democracy as found in section \ref{sec:workplacedemocracy_issues} using digital presented in section \ref{sec:digitaldemocracy_aroundtheworld} or inspired by them. The applicability and severity of the challenges of digital democracy presented in section \ref{sec:digitaldemocracy_challenges} to the workplace context must be analyzed and discussed.
+
+
+
+\section{Applicability of Digital Democracy to the workplace} \label{sec:dwd_applicability} % SQ 1
+
+\subsection{Preconditions for a responsible initial implementation of Digital Workplace Democracy} \label{subsec:dwd_applicability_preconditions}
+
+\subsubsection{Legal requirements} \label{subsubsec:dwd_applicability_preconditions_legal}
+    \item Legal requirements (e.g. share salary to be able to negotiate it democratically) % CHECK
+
+\subsubsection{Technical requirements} \label{subsubsec:dwd_applicability_preconditions_technical}
+One key factor to responsibly implementing Digital Workplace Democracy measures is to have reliable tools at hand. Whether it is a system for digital voting or for anonymous feedback inside an organization, the minimum requirement is a system that can ensure the security and anonymity of participating where it is provided by design. It must therefore be
+\begin{itemize}
+    \item robust -- able to cope with erroneous input and higher than expected demand,
+    \item secure -- able to authenticate users and verify their right to use the software while minimizing exposure to hackers and manipulation, and
+    \item transparent -- developed in a way that is only as complex as necessary and ideally adhering to the open-source principle.
+\end{itemize}
+
+Furthermore, every member of the organization or the democratic unit must have equal technical access to the tool. This means that a connected solution has to be found in units with employees in different locations or even in different countries. 
+
+Everything in this section is the minimum viable requirements for a system that would -- for instance -- be able to adhere to the election principles as outlined in section \ref{subsec:digitaldemocracy_challenges_complexitytrust}.
+
+    % \item Secure, robust, and transparent e-democracy systems guaranteeing for example the adherence to election principles
+    % \item Equal access (technical and social) to the democratic tools along the process (example elections: voting portal, information sources, ability to communicate with the candidate/their campaign... % only technical
+
+\subsubsection{Social requirements} \label{subsubsec:dwd_applicability_preconditions_social}
+Equal access is not just a technical requirement as elucidated in the previous section  \ref{subsubsec:dwd_applicability_preconditions_technical} but also a social requirement. While the internet makes the globally accessible implementation of software fairly simple, access still is not necessarily as simple for everyone. Not every member of an organization is equally equipped with technology to use the tools and participate in the digitalized democratic process, nor is every member equally skilled to effectively use the tools (see section \ref{subsec:digitaldemocracy_challenges_digitaldivide}). It should hence be seen as a basic requirement to ensure equal access to technical means, infrastructure, as well as to training resources for using them. %CHECK why
+
+It is also important that relevant stakeholders overwhelmingly support the transition to Digital Workplace Democracy. The most central group of stakeholders are employees that should self-evidently be in favor of the change as intrinsic motivation is important for significant and serious participation. But other groups of stakeholders should also support the change, including current management and shareholders. These groups in particular often carry a high level of power to disparage or stop the efforts and they might also have motives to do so if Digital Workplace Democracy would mean they would lose certain powers or positions in the organization.
+
+Lastly, a high level of trust in the e-democracy systems is also crucial. For the reasons thoroughly outlined in section \ref{subsec:digitaldemocracy_challenges_complexitytrust}, it is important to develop systems transparently (see section \ref{subsubsec:dwd_applicability_preconditions_technical}) and to establish an open feedback culture while doing so.
+
+    % \item Equal access (technical and social) to the democratic tools along the process (example elections: voting portal, information sources, ability to communicate with the candidate/their campaign... % only social
+    % \item Support from stakeholders (shareholders, employees, management, customers -- neither should be generally opposed to the changes)
+    % \item High level of trust in the e-democracy systems
+
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=\textwidth]{ComparisonContextsDemocracy.png}
+%     \caption{A Comparison of Essential Democratic Characteristics in Two Contexts.\\ Source: \cite{Kerr.2004}, p. 84} % selbst neu machen
+%     % \label{fig:digitaldemocracy_challenges_CovidMisinformationSources} % CHECK noch labeln
+% \end{figure}
+
+
+\subsection{Factors contributing to a successful transition to Digital Workplace Democracy}
+\subsubsection{Proper size of the democratic entity}
+For some approaches to digital workplace democracy, the entirety of an organization must be considered. For example, if a committee is to be established that would represent employee interests against the management or shareholders on the organization-wide level, or if top-level executives like the CEO are elected in a direct-democratic manner. However, being only a single vote out of thousands of employees in some large enterprises could for some feel just as small and meaningless as in a national election. Casting this vote in just a few clicks might add to this issue.
+
+Other democratic approaches can only function in a comparably unit. For example, employees interviewing and approving future superordinates as done at Semco (see section \ref{subsubsec:workplacedemocracy_approaches_direct_semco}) or democratic setting of salaries like at 10Pines (see section \ref{subsubsec:workplacedemocracy_approaches_direct_10pines}) are only possible in small organizations or in sub-divided teams. Ricardo \textcite{Semler.1989} concludes that \enquote{it’s clear that several thousand people in one facility makes individual involvement an illusion.}
+
+\subsubsection{Degree of participation}
+It is quite obvious that low levels of participation makes most (digital) democratic tools redundant. Low participation would translate to an equally low level of democratic legitimization of the decisions made. It could be a sign that the approach is not accessible, trusted, or accepted by the workforce (see section \ref{subsec:dwd_applicability_preconditions}). In addition to most likely not reaching the intended goals, it could also be regarded as an attempt to appear more democratic and employee-friendly in the public eye.
+
+However, a very high level of participation can also be negative as it may be hard to manage, i.e. uncontrollable democratic decisions can make it hard for corporate leadership to steer the organization towards aligning with strategic goals or any coherent path.
+
+\subsubsection{Changeability of the organization}
+As implied in section \ref{subsubsec:dwd_applicability_preconditions_social}, all parties involved in the organization need to at the very least accept the proposed organizational shift towards digital workplace democracy. Most crucially, this includes the workforce, the management, and shareholders. A higher level of support, however, will lead to higher motivation to adapt the change and immerse in the new culture of democratic participation. Regardless of the intended outcome (see section \ref{sec:dwd_intendedoutcomes}) and the specific approach or approaches (see section \ref{sec:dwd_approaches}), this should always be the encouraged.
+
+Therefore, the readiness of the organization to change can be a major determinant of the level of success of such an endeavor. Just as importantly, the least supportive of the central stakeholder groups -- workforce, management, shareholders -- could alone disrupt the success of the effort: The workforce can simply participate less, shareholders may have the power to block the implementation before it happens, and managers can either diminish the granted level of participation or the public image of the effort by denigrating it.
+% Wiederholung von Preconditions - passt das hier her?
+
+
+\begin{itemize}
+    % \item Size of the organization/democratic entity
+    % \item Degree of participation (too low: negative/no effect; too high: lack of controllability, question of responsibility)
+    \item Willingness to give up control and power
+    \item Changeable organization (staff's openness to change, established change management, no rigid structures/processes)
+    \item IT infrastructure, resourceful IT, staff knowledgeable in terms of IT
+    \item \cite{Kerr.2004}, p. 89: The Work of the Organization
+    \item \cite{Kerr.2004}, p. 91: The Nature of the Workforce
+    \item \cite{Kerr.2004}, p. 92 : The Existing Organization
+    \item \cite{Kerr.2004}, p. 92: The Commitment of Management
+\end{itemize}
+% CHECK noch reinmachen?
+
+
+\section{Potential approaches for Digital Workplace Democracy}
+\label{sec:dwd_approaches}
+% SQ 2
+
+\subsection{Community-based online participation in codetermination bodies}
+Most of the suggestions in this section introduce an entirely new democratic element to the workplace that is digital by design. However, the digital aspect can not only enable new democratic elements in organizations in the first place. It may also improve existing democratic elements to make them more accessible, more efficient, more secure, or easier to manage. % check dass es nicht doppelt ist mit evaluation
+
+One example is the community-based participation in codetermination bodies. Works councilors (see section \ref{subsubsec:workplacedemocracy_approaches_representative_workplacecodet}), employee representatives in supervisory boards (see section \ref{subsubsec:workplacedemocracy_approaches_representative_boardlevelcodet}), as well as labor union officials (see section \ref{subsubsec:workplacedemocracy_approaches_representative_laborunions}) all represent employees' interests on different levels of the organization and industry. A study by \textcite{Krings.2015} investigated the communication between the Austrian company's works council and its workforce. The Austrian and German \textit{Betriebsrat} systems and legal frameworks are closely comparable. Even though the overwhelming majority of the workforce seems to see the works council very positively (\cite{Krings.2015}, pp. 12-15, 19), only about half of the workforce (depending on the mode of employment) views a works councilor as an important reference person (\cite{Krings.2015}, pp. 11 f.). However, a few reasons seem to bar employees from contacting their works councilor in some cases:
+\begin{itemize}
+    \item they do not believe the works council can change their situation,
+    \item they feel they might be skipping their direct supervisor,
+    \item their jobs do not permit them to get in touch with the works council,
+    \item they are afraid of talking about their problems, and
+    \item the works council is difficult to get in touch with (although less than 5\% agreed with this statement).
+\end{itemize}
+
+An online platform could help alleviate these barriers. Such a platform could include several features that would make it more accessible for employees who are not elected representatives themselves to raise their concerns, voice their interests, and contribute more directly to the codetermination bodies. This would enable 
+
+
+\begin{enumerate}
+    \item
+    \ref{subsubsec:workplacedemocracy_approaches_representative_boardlevelcodet} \& \ref{subsubsec:workplacedemocracy_approaches_representative_workplacecodet}: Online portal for a more community-based and more direct representation in workforce codetermination bodies 
+    \begin{itemize}
+        \item e.g. easy, informal, and anonymous complaints about regulation violations/unjust treatment/misconduct
+        \item or putting certain decisions such as changes in labor conditions, recruitments/dismimssals on a vote or provide a way to appeal for those affected before representatives in the Betriebsrat or Aufsichtsrat respectively vote
+        \item could be developed as open source software by the labor unions (which should have an interest in strong codetermination bodies)
+    \end{itemize}
+    \item \ref{subsubsec:workplacedemocracy_approaches_representative_execelections} \& \ref{subsec:digitaldemocracy_aroundtheworld_abgeordnetenwatch}: Digital elections of business executives
+    \begin{itemize}
+        \item Standardized candidate profiles stating history, expertise, vision, etc.
+        \item Option to ask candidates questions anonymously
+        \item Anonymized single-use token per employee to vote directly online
+        \item Double-check if this actually helps resolve problems of analog executives elections + useful for whom?
+    \end{itemize}
+    \item \ref{subsubsec:workplacedemocracy_approaches_direct_adviceprocess} \& \ref{subsec:digitaldemocracy_aroundtheworld_brexitpetition}: Petition/feedback process hybrid
+    \begin{itemize}
+        \item Employees can propose feedback/ideas regarding new/changed processes, workplace/safety regulations (e.g. mask mandate), investment decisions, the conduct of superiors...
+        \item A specific person/team/department/decision-making level/policy group + budget/finance representative needs to be selected as the expert (group) who can on the basis of feasibility accept/reject/in consultation with the petitioner modify the idea \textit{(optional component?)}
+        \item After this initial phase, all affected employees can vote on the matter
+        \item The management/board either has to discuss, vote internally, and give feedback on the successful petition \textit{or} immediately has the order to implement successful proposals
+    \end{itemize}
+    \item \ref{subsubsec:workplacedemocracy_approaches_direct_semco}: Full transparency via online platform
+    \begin{itemize}
+        \item Easily comprehensible business report containing \textbf{all} goals and performance indicators used by the management, updated as frequently as possible
+        \item Allowing for employees to have the same basis of information as the management, contribute more valuable ideas, and get a better understanding for business decisions
+    \end{itemize}
+    \item \ref{subsubsec:workplacedemocracy_approaches_direct_10pines}: Salary portal/online requests for higher salary (minor idea)
+    \item \ref{subsec:digitaldemocracy_aroundtheworld_belohorionte-eparticipatorybudget}: Finance transparency including a participatory budget/ways to suggest different/better use for funds (minor idea)
+    \item \ref{subsubsec:workplacedemocracy_approaches_representative_laborunions} \& \ref{subsec:digitaldemocracy_aroundtheworld_eu-copyright-protest}: Surveying and transparency tools for labor unions
+    \begin{itemize}
+        \item Centralized conduction of polls and surveys to support/analyze the need for union intervention, e.g. to find  out about aspects of privacy/work-life balance (what portion of customer-facing employees in industry XY need to use private devices/phone numbers for work?)
+        \item Transparent and reliable information about labor conditions such as salary, paid time off, and working hours per industry/company based on optional pseudonymized information submitted by union members
+        \item Easier way to organize union-backed strikes or other action
+    \end{itemize}
+    \item 
+\end{enumerate}
+
+
+\section{Evaluation of the value of Digital Workplace Democracy}
+\label{sec:dwd_evaluationvalue}
+
+% SQ 3
+
+\subsection{Intended outcomes for the proposed approaches}
+\label{sec:dwd_intendedoutcomes}
+
+Not all approaches are suitable for all goals.
+\begin{enumerate}
+    \item Crowd-source better ideas and decisions, and more agreeable goals (premise: all staff is more likely to represent a larger group such as the customers or society at large than just the management board)
+    \item \cite{Robinson.2004}: Develop and nurture employee engagement (premise: participation encourages employees to be more aware of the business context, actively think about how to improve the organization, and therefore also works too improve within the job for the benefit of the organization) --> positive effects on performance outcomes
+    \item ...
+\end{enumerate}
+
+\subsection{Advantages compared to non-digital participation methods}
+make participation less bureaucratic, more manageable and accessible...
+
+\subsection{Indicators for measuring the success of Digital Workplace Democracy}
+\begin{enumerate}
+    \item Employee engagement
+    % https://www.personio.com/hr-lexicon/measuring-employee-engagement/
+    % https://www.gallup.com/workplace/313313/historic-drop-employee-engagement-follows-record-rise.aspx
+    \begin{itemize}
+        \item Employee happiness score
+        \item Qualitative surveying asking employees (anonymously) questions about how they feel about pride, endorsement, motivation, current and future commitment
+        \item Turnover rate, early attrition rate, \& absenteeism rate
+    \end{itemize}
+    \item Overall performance
+    \begin{itemize}
+        \item Industry/company/team-specific productivity rates according to their particular goals (deals closed, measuring output, downtime)
+        \item Quality and customer satisfaction
+        \item Financial success (profit, gross margin, revenue/employee)
+    \end{itemize}
+    \item Employee participation
+    \begin{itemize}
+        \item Participation rate (usage of tools measured by page views/logins/votes/proposals in relation to total employees)
+        \item Qualitative surveying (ask employees if they feel well-represented and like they can influence business decisions...)
+    \end{itemize}
+    \item work in progress (see \cite{Harter.2020}) % CHECK
+\end{enumerate}
+
+\chapter{Discussion of the results}
+\section{Conclusion and recommendations for action}
+Übersicht mit Pfaden (bestimmte Ziele -> welche Approaches passen dafür)
+\section{Limitations of the study}
+\section{Recommendations for further work}
+
+
+
+% CQ: How valuable are the identified digital participatory measures for organizations based on a framework of criteria?
+% \item SQ 1: What are formal criteria (prerequisites) for organizations and approaches?
+% \item SQ 2: What are potential approaches for Digital Workplace Democracy? (including Digital Democracy approaches applicable to organizational structures, existing Workplace Democracy approaches that can be digitalized, and new possible approaches)
+% \item SQ 3: How valuable are the expected effects for the organization, based on a set of evaluation criteria? (also taking into account the intended outcomes and the comparison to non-digital alternatives)
+
+
+
+
+
+
+
+
+
+% Mayer 2009
+% Nightingale 1982, Chapter 1
+
+    % Welche Chancen und Risiken hat die Einführung demokratischer Partizipation in Organisationen?
+    %     Chancen u.a.: Motivation -> Produktivität, Mitarbeiterzufriedenheit, Identifikation mit dem Unternehmen, Außenwirkung
+    %     Risiken u.a.: Kontrollverlust, Auflösung von Weisungsstrukturen, verlängerte Entscheidungsprozesse
+
+
+    
+    % Wie könnte sich die Digitalisierung von Workplace Democracy auf die Effekte von Workplace Democracy auswirken und welche zusätzlichen Effekte entstehen darüber hinaus durch "Digital Workplace Democracy"?
+    %     Zum Beispiel: Werden Partizipationsmöglichkeiten so eher wahrgenommen? Dauern demokratische Entscheidungsprozesse auf diese Weise vielleicht doch nicht länger?
+    %     Aber auch: Wird Demokratisierung vielleicht so überhaupt erst möglich in bestimmten Organisationen? Welche anderen neuen Qualitäten entstehen dadurch, die es bei "analoger" Workplace Democracy nicht gibt? (z.B. Zeitersparnisse, s. e-Estonia)
+    
+    
+    % Wie sind die zu erwartenen Effekte für Organisationen zu bewerten? In der Konsequenz: Für welche Organisationen/organisationale Ziele könnten Maßnahmen der "Digital Workplace Democracy" geeignet sein?
+    
+    
+    % Anhand welcher KPIs oder qualitativer Merkmale kann gemessen werden, ob Maßnahmen der "Digital Workplace Democracy" hinsichtlich der definierten Ziele wirken?
+    
+    
+    % Welche Empfehlungen sind daraus für Organisationen abzuleiten, die über die Einführung von Maßnahmen der "Digital Workplace Democracy" nachdenken?
+    
+    
+    
+    
+% CHECK ob das am Anfang noch rein sollte und ob das so eingehalten wurde: Foley 2006, p. 174: Participation is a necessary but insufficient condition for workplace democracy (Adams and Hansen, 1992; Cheney, 1995; Collins, 1997; Knudsen, 1995). Workplace democracy exists when employees have some real control over organizational goal-setting and strategic planning, and can thus ensure that their own goals and objectives, rather than only those of the organization, can be met. Participation does not meet the requirements for workplace democracy, because it exists whenever employees are allowed to give input into organizational decisions, even if it means they only suggest ways to implement decisions that have already been made.
+    
+% Index of acronyms
+\newacronym{ict}{ICT}{Information and communications technology}
+\newacronym{eu}{EU}{European Union}
+\newacronym{nceo}{NCEO}{National Center for Employee Ownership}
+\newacronym{ngo}{NGO}{Non-governmental organization}
+\newacronym{pac}{PAC}{Political action committee}
+\newacronym{us}{U.S.}{United States of America}
+\newacronym{dre}{DRE}{Direct-Recording Electronic}
+\newacronym{vvpat}{VVPAT}{Voter-Verifiable Paper Audit Trail}
+\newacronym{mmpr}{MMPR}{Mixed-member proportional representation}
+\newacronym{epb}{ePB}{e-Participatory Budgeting}
+\newacronym{pmo}{PMO}{Parliamentary Monitoring Organization}
+\newacronym{mp}{MP}{Member of Parliament}
+\newacronym{uk}{UK}{United Kingdom of Great Britain and Northern Ireland}
+\newacronym{mep}{MEP}{Member of the European Parliament}
+\newacronym{ses}{SES}{socio-economic status}
+\newacronym{covid}{COVID-19}{Coronavirus disease 2019}
+\newacronym{udhr}{UDHR}{Universal Declaration of Human Rights}
+\newacronym{fte}{FTE}{Full-time equivalent}
+\newacronym{ag}{AG}{\textit{Aktiengesellschaft} (German, joint stock company)}
+\newacronym{hr}{HR}{Human Resources}
+\newacronym{sa}{SA}{\textit{Sociedade Anônima} (Brazilian Portuguese, joint stock company)}
+\newacronym{ai}{AI}{Artificial Intelligence}
+\newacronym{ubi}{UBI}{universal basic income}
+\newacronym{it}{IT}{information technology}
+\newacronym{r&d}{R\&D}{Research \& Development}
+\newacronym{snp}{SNP}{Scottish National Party}
+\newacronym{apa}{APA}{American Psychological Association}
+
+
+% Bibliography
+% CHECK: Ehin & Mihkel falsche DOI (_ wird zu \textunderscore) - nach weiteren Fehlern suchen
+\printbibliography \addcontentsline{toc}{chapter}{\bibname} % CHECK: contents line im Inhaltsverzeichnis zeigt falsche Seite
+
+
+% CHECK !!!
+% Citation "via" anpassen ans Format
+% Anführungszeichen ""
+% \appendix
+% \addcontentsline{toc}{chapter}{Appendix}
+% \addcontentsline{toc}{section}{Sample U.S. ballot (November 3, 2020 election ballot in Weld County, CO)}
+% \includepdf[pages=-]{2020_CO_Ballot}
+
+\end{document}
