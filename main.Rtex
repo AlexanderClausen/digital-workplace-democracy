@@ -917,10 +917,17 @@ One example is the community-based participation in codetermination bodies. Work
     \item they feel they might be skipping their direct supervisor,
     \item their jobs do not permit them to get in touch with the works council,
     \item they are afraid of talking about their problems, and
-    \item the works council is difficult to get in touch with (although less than 5\% agreed with this statement).
+    \item the works council is difficult to get in touch with (although less than 5\% agreed with this last statement).
 \end{itemize}
 
-An online platform could help alleviate these barriers. Such a platform could include several features that would make it more accessible for employees who are not elected representatives themselves to raise their concerns, voice their interests, and contribute more directly to the codetermination bodies. This would enable 
+An online platform could help alleviate these barriers. Such a platform could include several features that would make it more accessible for employees who are not elected representatives themselves to raise their concerns, voice their interests, and contribute more directly to the codetermination bodies. Examples for possible functionalities could be
+\begin{itemize}
+    \item easy, informal, and anonymous submission of complaints (e.g. about workplace regulation violations, unjust treatment of employees, management misconduct), feedback, and suggestions,
+    \item transparent communication about current issues and codetermination body initiatives, and
+    \item online voting on certain decisions such as changes in labor condition for councilors to better represent the workforce and to maximize their democratic legitimization in negotiations.
+\end{itemize}
+
+Many works councils may not have the resources to develop such an online platform. However, works councils and labor unions often cooperate closely, in some countries including Germany (§ 2, Works Constitution Act/Betriebsverfassungsgesetz) they are even legally obliged to work together. For this reason, labor unions could develop a platform like this as an open source project and provide it to works councils to put employees in a better position.
 
 
 \begin{enumerate}
