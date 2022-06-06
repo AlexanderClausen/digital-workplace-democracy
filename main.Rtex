@@ -908,7 +908,7 @@ Therefore, the readiness of the organization to change can be a major determinan
 \label{sec:dwd_approaches}
 % SQ 2
 
-\subsection{Community-based online participation in codetermination bodies}
+\subsection{Community-based online participation in codetermination bodies} \label{subsec:dwd_approaches_codet_participation}
 Most of the suggestions in this section introduce an entirely new democratic element to the workplace that is digital by design. However, the digital aspect can not only enable new democratic elements in organizations in the first place. It may also improve existing democratic elements to make them more accessible, more efficient, more secure, or easier to manage. % check dass es nicht doppelt ist mit evaluation
 
 One example is the community-based participation in codetermination bodies. Works councilors (see section \ref{subsubsec:workplacedemocracy_approaches_representative_workplacecodet}), employee representatives in supervisory boards (see section \ref{subsubsec:workplacedemocracy_approaches_representative_boardlevelcodet}), as well as labor union officials (see section \ref{subsubsec:workplacedemocracy_approaches_representative_laborunions}) all represent employees' interests on different levels of the organization and industry. A study by \textcite{Krings.2015} investigated the communication between the Austrian company's works council and its workforce. The Austrian and German \textit{Betriebsrat} systems and legal frameworks are closely comparable. Even though the overwhelming majority of the workforce seems to see the works council very positively (\cite{Krings.2015}, pp. 12-15, 19), only about half of the workforce (depending on the mode of employment) views a works councilor as an important reference person (\cite{Krings.2015}, pp. 11 f.). However, a few reasons seem to bar employees from contacting their works councilor in some cases:
@@ -920,24 +920,27 @@ One example is the community-based participation in codetermination bodies. Work
     \item the works council is difficult to get in touch with (although less than 5\% agreed with this last statement).
 \end{itemize}
 
-An online platform could help alleviate these barriers. Such a platform could include several features that would make it more accessible for employees who are not elected representatives themselves to raise their concerns, voice their interests, and contribute more directly to the codetermination bodies. Examples for possible functionalities could be
+An online platform could help alleviate these barriers. Such a platform could include several features that would make it more accessible for employees who are not elected representatives themselves to raise their concerns, voice their interests, and contribute more directly to the codetermination bodies. Examples of possible functionalities could be
 \begin{itemize}
     \item easy, informal, and anonymous submission of complaints (e.g. about workplace regulation violations, unjust treatment of employees, management misconduct), feedback, and suggestions,
     \item transparent communication about current issues and codetermination body initiatives, and
-    \item online voting on certain decisions such as changes in labor condition for councilors to better represent the workforce and to maximize their democratic legitimization in negotiations.
+    \item online voting on certain decisions such as changes in labor conditions for councilors to better represent the workforce and to maximize their democratic legitimization in negotiations.
 \end{itemize}
 
-Many works councils may not have the resources to develop such an online platform. However, works councils and labor unions often cooperate closely, in some countries including Germany (§ 2, Works Constitution Act/Betriebsverfassungsgesetz) they are even legally obliged to work together. For this reason, labor unions could develop a platform like this as an open source project and provide it to works councils to put employees in a better position.
+Many works councils may not have the resources to develop such an online platform. However, works councils and labor unions often cooperate closely, in some countries including Germany (§ 2, Works Constitution Act/Betriebsverfassungsgesetz) they are even legally obliged to work together. For this reason, labor unions could develop a platform like this as an open-source project and provide it to works councils to put employees in a better position.
+
+\subsection{Digital election of business executives} \label{subsec:dwd_approaches_codet_participation}
+
 
 
 \begin{enumerate}
-    \item
-    \ref{subsubsec:workplacedemocracy_approaches_representative_boardlevelcodet} \& \ref{subsubsec:workplacedemocracy_approaches_representative_workplacecodet}: Online portal for a more community-based and more direct representation in workforce codetermination bodies 
-    \begin{itemize}
-        \item e.g. easy, informal, and anonymous complaints about regulation violations/unjust treatment/misconduct
-        \item or putting certain decisions such as changes in labor conditions, recruitments/dismimssals on a vote or provide a way to appeal for those affected before representatives in the Betriebsrat or Aufsichtsrat respectively vote
-        \item could be developed as open source software by the labor unions (which should have an interest in strong codetermination bodies)
-    \end{itemize}
+    %\item
+    %\ref{subsubsec:workplacedemocracy_approaches_representative_boardlevelcodet} \& \ref{subsubsec:workplacedemocracy_approaches_representative_workplacecodet}: Online portal for a more community-based and more direct representation in workforce codetermination bodies 
+    %\begin{itemize}
+    %    \item e.g. easy, informal, and anonymous complaints about regulation violations/unjust treatment/misconduct
+    %    \item or putting certain decisions such as changes in labor conditions, recruitments/dismimssals on a vote or provide a way to appeal for those affected before representatives in the Betriebsrat or Aufsichtsrat respectively vote
+    %    \item could be developed as open source software by the labor unions (which should have an interest in strong codetermination bodies)
+    %\end{itemize}
     \item \ref{subsubsec:workplacedemocracy_approaches_representative_execelections} \& \ref{subsec:digitaldemocracy_aroundtheworld_abgeordnetenwatch}: Digital elections of business executives
     \begin{itemize}
         \item Standardized candidate profiles stating history, expertise, vision, etc.
