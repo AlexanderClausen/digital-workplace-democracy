@@ -412,7 +412,7 @@ Abgeordnetenwatch.de is another \acrshort{pmo} for \acrshort{mep}s from Germany 
 
 All of the mentioned \acrshort{pmo}s are non-partisan \acrlong{ngo}s, thus politicians are free to choose whether or not to interact with voters on the platforms. Abgeordnetenwatch.de, however, is a trusted and long-standing organization and the best-established platform for digital interaction between politicians and voters in Germany. Therefore, if politicians choose not to respond to voter inquiries, it might be received as refusing to stand up for their remarks or voting behavior or at the least as not prioritizing communication with the constituents they ought to represent.
 
-\subsection{E-Petition against Brexit in the \acrshort{uk}} \label{subsec:digitaldemocracy_aroundtheworld_brexitpetition}
+\subsection{E-Petition in the \acrshort{uk} against Brexit} \label{subsec:digitaldemocracy_aroundtheworld_brexitpetition}
 One of the best-established forms of digital democracy is e-petitioning. A petition is a document delivering a request for a certain action, typically brought forward with expressed support from as many signers as possible. While petitions can be directed at any person or organization, the most common addressees are governments or legislatures.
 
 Many countries' legislatures have formalized procedures and permanent legislative committees to deal with petitions. To make it easier for citizens to start a petition or to see and support petitions, online petitioning has gained increased popularity in recent years. Petitions on private websites like \textit{Change.org} and other for-profit and non-profit services are quite commonly seen in social media. However, the more important e-petitioning services when it comes to requests for laws or government action are official online petitioning web portals as petitions on third-party websites are sometimes not considered by official bodies.
@@ -437,6 +437,9 @@ The petition was ultimately dismissed in Parliament by Conservative \acrshort{mp
 % https://en.wikipedia.org/wiki/Revoke_Article_50_and_remain_in_the_EU_petition
 % https://en.wikipedia.org/wiki/UK_Parliament_petitions_website
 % CHECK ergänzen
+
+
+% CHECK noch hinzufügen?: Voting advice application wie Wahl-o-mat (darauf verweisen in abschnitt zu digital executive elections)
 
 
 
@@ -930,24 +933,26 @@ An online platform could help alleviate these barriers. Such a platform could in
 Many works councils may not have the resources to develop such an online platform. However, works councils and labor unions often cooperate closely, in some countries including Germany (§ 2, Works Constitution Act/Betriebsverfassungsgesetz) they are even legally obliged to work together. For this reason, labor unions could develop a platform like this as an open-source project and provide it to works councils to put employees in a better position.
 
 \subsection{Digital election of business executives} \label{subsec:dwd_approaches_codet_participation}
+While executives are already chosen democratically in some organizations (see section \ref{subsubsec:workplacedemocracy_approaches_representative_execelections}), holding an election adhering to the standards that make them fair and just is not simple. Holding a quick vote of who is in charge can be easy in a close team of a few people. In the context of a larger organization, on the other hand, it can be highly complicated since
+\begin{itemize}
+    \item choosing executives can be a consequential decision that should be treated seriouslY and ensuring a fair and just election requires careful preparation of processes that adhere to election standards (see section \ref{subsec:digitaldemocracy_challenges_complexitytrust}),
+    \item manually tallied elections are time-intensive and therefore costly since poll workers and ideally poll watchers are needed to monitor the voting process and employees need to spend some time going to a physical polling station and vote, and
+    \item not all employees know all candidates and it can be complicated, if not impossible depending on the size and geographic spreading of the organization, to rally for their platform in-person to all employees.
+\end{itemize}
 
+Digital elections, however, can help weaken these arguments. There is electronic voting software already available that is trusted and proven to adhere to election standards. Digital voting allows employees to vote in a few clicks, no matter where they are located. It also reduces the monitoring effort to one or few impartial specialists verifying and monitoring the integrity of the election (see section \ref{subsec:digitaldemocracy_gains_efficiency}). %CHECK mit Kapitel 5 ob ich nicht widerspreche dass es so easy und einfach fertig gibt
 
+A universal campaigning platform can also be a helpful tool for candidates to introduce the platform they rally for and themselves organization-wide. Similar to \acrshort{pmo}s as presented in section \ref{subsec:digitaldemocracy_aroundtheworld_abgeordnetenwatch} and voting advice applications such as the German \textit{Wahl-O-Mat}, such a platform can account for an equal chance in the form of a standardized profile for candidates to present their ideas, answer questions, and position themselves. %CHECK was kursiv?
+
+\subsection{Digital democratic decision-making}
+A range of ways to incorporate a democratically-driven change culture in an organization. 
+\begin{itemize}
+    \item Referendums: employee-submitted proposals that gather majority support within the organization must be executed by the management
+    \item Petitions: employees can petition for change and if a certain threshold of support within the organization is reached, the management is compelled to consider the petition and publicly state its intention and position toward the petition (see section \ref{subsec:digitaldemocracy_aroundtheworld_brexitpetition})
+    \item Advice Process: when employees can come up with ideas they want to see enacted in their workplace, they can ask co-workers who are experts on the topic and those who would be affected by it for feedback and advice. Once they gather support for their idea, they can enact policies without formal decision-making power (see section \ref{subsubsec:workplacedemocracy_approaches_direct_adviceprocess})
+\end{itemize}
 
 \begin{enumerate}
-    %\item
-    %\ref{subsubsec:workplacedemocracy_approaches_representative_boardlevelcodet} \& \ref{subsubsec:workplacedemocracy_approaches_representative_workplacecodet}: Online portal for a more community-based and more direct representation in workforce codetermination bodies 
-    %\begin{itemize}
-    %    \item e.g. easy, informal, and anonymous complaints about regulation violations/unjust treatment/misconduct
-    %    \item or putting certain decisions such as changes in labor conditions, recruitments/dismimssals on a vote or provide a way to appeal for those affected before representatives in the Betriebsrat or Aufsichtsrat respectively vote
-    %    \item could be developed as open source software by the labor unions (which should have an interest in strong codetermination bodies)
-    %\end{itemize}
-    \item \ref{subsubsec:workplacedemocracy_approaches_representative_execelections} \& \ref{subsec:digitaldemocracy_aroundtheworld_abgeordnetenwatch}: Digital elections of business executives
-    \begin{itemize}
-        \item Standardized candidate profiles stating history, expertise, vision, etc.
-        \item Option to ask candidates questions anonymously
-        \item Anonymized single-use token per employee to vote directly online
-        \item Double-check if this actually helps resolve problems of analog executives elections + useful for whom?
-    \end{itemize}
     \item \ref{subsubsec:workplacedemocracy_approaches_direct_adviceprocess} \& \ref{subsec:digitaldemocracy_aroundtheworld_brexitpetition}: Petition/feedback process hybrid
     \begin{itemize}
         \item Employees can propose feedback/ideas regarding new/changed processes, workplace/safety regulations (e.g. mask mandate), investment decisions, the conduct of superiors...
@@ -955,20 +960,41 @@ Many works councils may not have the resources to develop such an online platfor
         \item After this initial phase, all affected employees can vote on the matter
         \item The management/board either has to discuss, vote internally, and give feedback on the successful petition \textit{or} immediately has the order to implement successful proposals
     \end{itemize}
+    
     \item \ref{subsubsec:workplacedemocracy_approaches_direct_semco}: Full transparency via online platform
     \begin{itemize}
         \item Easily comprehensible business report containing \textbf{all} goals and performance indicators used by the management, updated as frequently as possible
         \item Allowing for employees to have the same basis of information as the management, contribute more valuable ideas, and get a better understanding for business decisions
     \end{itemize}
+    
     \item \ref{subsubsec:workplacedemocracy_approaches_direct_10pines}: Salary portal/online requests for higher salary (minor idea)
+    
     \item \ref{subsec:digitaldemocracy_aroundtheworld_belohorionte-eparticipatorybudget}: Finance transparency including a participatory budget/ways to suggest different/better use for funds (minor idea)
+    
     \item \ref{subsubsec:workplacedemocracy_approaches_representative_laborunions} \& \ref{subsec:digitaldemocracy_aroundtheworld_eu-copyright-protest}: Surveying and transparency tools for labor unions
     \begin{itemize}
         \item Centralized conduction of polls and surveys to support/analyze the need for union intervention, e.g. to find  out about aspects of privacy/work-life balance (what portion of customer-facing employees in industry XY need to use private devices/phone numbers for work?)
         \item Transparent and reliable information about labor conditions such as salary, paid time off, and working hours per industry/company based on optional pseudonymized information submitted by union members
         \item Easier way to organize union-backed strikes or other action
     \end{itemize}
+    
     \item 
+
+    %\item
+    %\ref{subsubsec:workplacedemocracy_approaches_representative_boardlevelcodet} \& \ref{subsubsec:workplacedemocracy_approaches_representative_workplacecodet}: Online portal for a more community-based and more direct representation in workforce codetermination bodies 
+    %\begin{itemize}
+    %    \item e.g. easy, informal, and anonymous complaints about regulation violations/unjust treatment/misconduct
+    %    \item or putting certain decisions such as changes in labor conditions, recruitments/dismimssals on a vote or provide a way to appeal for those affected before representatives in the Betriebsrat or Aufsichtsrat respectively vote
+    %    \item could be developed as open source software by the labor unions (which should have an interest in strong codetermination bodies)
+    %\end{itemize}
+    
+    % \item \ref{subsubsec:workplacedemocracy_approaches_representative_execelections} \& \ref{subsec:digitaldemocracy_aroundtheworld_abgeordnetenwatch}: Digital elections of business executives
+    % \begin{itemize}
+    %     \item Standardized candidate profiles stating history, expertise, vision, etc.
+    %     \item Option to ask candidates questions anonymously
+    %     \item Anonymized single-use token per employee to vote directly online
+    %     \item Double-check if this actually helps resolve problems of analog executives elections + useful for whom?
+    % \end{itemize}
 \end{enumerate}
 
 
