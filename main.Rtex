@@ -932,7 +932,7 @@ An online platform could help alleviate these barriers. Such a platform could in
 
 Many works councils may not have the resources to develop such an online platform. However, works councils and labor unions often cooperate closely, in some countries including Germany (§ 2, Works Constitution Act/Betriebsverfassungsgesetz) they are even legally obliged to work together. For this reason, labor unions could develop a platform like this as an open-source project and provide it to works councils to put employees in a better position.
 
-\subsection{Digital election of business executives} \label{subsec:dwd_approaches_codet_participation}
+\subsection{Digital election of business executives} \label{subsec:dwd_approaches_codet-participation}
 While executives are already chosen democratically in some organizations (see section \ref{subsubsec:workplacedemocracy_approaches_representative_execelections}), holding an election adhering to the standards that make them fair and just is not simple. Holding a quick vote of who is in charge can be easy in a close team of a few people. In the context of a larger organization, on the other hand, it can be highly complicated since
 \begin{itemize}
     \item choosing executives can be a consequential decision that should be treated seriouslY and ensuring a fair and just election requires careful preparation of processes that adhere to election standards (see section \ref{subsec:digitaldemocracy_challenges_complexitytrust}),
@@ -944,7 +944,7 @@ Digital elections, however, can help weaken these arguments. There is electronic
 
 A universal campaigning platform can also be a helpful tool for candidates to introduce the platform they rally for and themselves organization-wide. Similar to \acrshort{pmo}s as presented in section \ref{subsec:digitaldemocracy_aroundtheworld_abgeordnetenwatch} and voting advice applications such as the German \textit{Wahl-O-Mat}, such a platform can account for an equal chance in the form of a standardized profile for candidates to present their ideas, answer questions, and position themselves. %CHECK was kursiv?
 
-\subsection{Digital democratic decision-making}
+\subsection{Digital democratic decision-making} \label{subsec:dwd_approaches_democratic-decision-making}
 There is a range of possibilities to incorporate a democratically-driven change in an organization, some of which have already been discussed in this thesis.
 \begin{itemize}
     \item Referendums: employee-submitted proposals that gather majority support within the organization must be executed by the management
@@ -956,6 +956,15 @@ The ideas have room for modification. For example, certain decisions (such as in
 
 The ways mentioned above or almost any variation or combination can conceptially easily be digitalized and applied to the workplace domain. For something like the advice process, a digital version could prevent ideas from not properly being peer-checked as everyone could see, vote on, and give feedback on the proposal.
 
+\subsection{Transparency platform}
+\label{subsec:dwd_approaches_transparency-platform}
+Many employees, especially in large enterprises, perceive their jobs lack purpose: they do not feel like they make valuable contributions and that they are left out of business decisions and have nothing to say. Only approaches like the ones presented in sections \ref{subsec:dwd_approaches_codet-participation} and especially \ref{subsec:dwd_approaches_democratic-decision-making} actually give employees a framework for participating and influencing the course of the organization.
+
+A key requirement for engaging employees in business decisions is to provide a sound knowledge of organizational strategies, goals, and \acrshort{kpi}s, available to everyone on demand. Only if employees know about what the organization aims to achieve and why, they can contribute informed and thus valuable suggestions.
+
+In addition to being a knowledge basis for other forms of participation, a platform comprehensibly communicating strategy, goals, and up-to-date \acrshort{kpi}s is great for employees to get a better understanding of what they work towards and how the organization is performing. Investors, \acrshort{ngo}s, and the general public will also appreciate the transparency as it adds an extra layer of responsibility for the management to actually try and achieve goals, including not only economic but also social, environmental, quality, and other goals. % Quellen für den ganzen Kram
+
+
 \begin{enumerate}
    
     \item \ref{subsubsec:workplacedemocracy_approaches_direct_semco}: Full transparency via online platform
@@ -964,7 +973,7 @@ The ways mentioned above or almost any variation or combination can conceptially
         \item Allowing for employees to have the same basis of information as the management, contribute more valuable ideas, and get a better understanding for business decisions
     \end{itemize}
     
-    \item \ref{subsubsec:workplacedemocracy_approaches_direct_10pines}: Salary portal/online requests for higher salary (minor idea)
+    % \item \ref{subsubsec:workplacedemocracy_approaches_direct_10pines}: Salary portal/online requests for higher salary (minor idea)
     
     \item \ref{subsec:digitaldemocracy_aroundtheworld_belohorionte-eparticipatorybudget}: Finance transparency including a participatory budget/ways to suggest different/better use for funds (minor idea)
     
@@ -1121,6 +1130,7 @@ make participation less bureaucratic, more manageable and accessible...
 \newacronym{r&d}{R\&D}{Research \& Development}
 \newacronym{snp}{SNP}{Scottish National Party}
 \newacronym{apa}{APA}{American Psychological Association}
+\newacronym{kpi}{KPI}{Key Performance Indicator}
 
 
 % Bibliography
@@ -1130,6 +1140,7 @@ make participation less bureaucratic, more manageable and accessible...
 
 % CHECK !!!
 % Citation "via" anpassen ans Format
+% Seitenzahlen!!!!
 % Anführungszeichen ""
 % \appendix
 % \addcontentsline{toc}{chapter}{Appendix}
