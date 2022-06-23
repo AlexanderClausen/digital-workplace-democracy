@@ -932,7 +932,7 @@ An online platform could help alleviate these barriers. Such a platform could in
 
 Many works councils may not have the resources to develop such an online platform. However, works councils and labor unions often cooperate closely, in some countries including Germany (§ 2, Works Constitution Act/Betriebsverfassungsgesetz) they are even legally obliged to work together. For this reason, labor unions could develop a platform like this as an open-source project and provide it to works councils to put employees in a better position.
 
-\subsection{Digital election of business executives} \label{subsec:dwd_approaches_codet-participation}
+\subsection{Digital election of business executives} \label{subsec:dwd_approaches_exec-elections}
 While executives are already chosen democratically in some organizations (see section \ref{subsubsec:workplacedemocracy_approaches_representative_execelections}), holding an election adhering to the standards that make them fair and just is not simple. Holding a quick vote of who is in charge can be easy in a close team of a few people. In the context of a larger organization, on the other hand, it can be highly complicated since
 \begin{itemize}
     \item choosing executives can be a consequential decision that should be treated seriouslY and ensuring a fair and just election requires careful preparation of processes that adhere to election standards (see section \ref{subsec:digitaldemocracy_challenges_complexitytrust}),
@@ -960,22 +960,23 @@ The ways mentioned above or almost any variation or combination can conceptially
 \label{subsec:dwd_approaches_transparency-platform}
 Many employees, especially in large enterprises, perceive their jobs lack purpose: they do not feel like they make valuable contributions and that they are left out of business decisions and have nothing to say. Only approaches like the ones presented in sections \ref{subsec:dwd_approaches_codet-participation} and especially \ref{subsec:dwd_approaches_democratic-decision-making} actually give employees a framework for participating and influencing the course of the organization.
 
-A key requirement for engaging employees in business decisions is to provide a sound knowledge of organizational strategies, goals, and \acrshort{kpi}s, available to everyone on demand. Only if employees know about what the organization aims to achieve and why, they can contribute informed and thus valuable suggestions.
+A key requirement for engaging employees in business decisions is to provide a sound knowledge of organizational strategies, goals, and \acrshort{kpi}s, available to everyone on demand. Only if employees know about what the organization aims to achieve and why, they can contribute informed and thus valuable suggestions. The goal of such a platform should be to transparently communicate goals, the reasoning behind them, and the same set of \acrshort{kpi}s that the management bases its decisions on.
 
 In addition to being a knowledge basis for other forms of participation, a platform comprehensibly communicating strategy, goals, and up-to-date \acrshort{kpi}s is great for employees to get a better understanding of what they work towards and how the organization is performing. Investors, \acrshort{ngo}s, and the general public will also appreciate the transparency as it adds an extra layer of responsibility for the management to actually try and achieve goals, including not only economic but also social, environmental, quality, and other goals. % Quellen für den ganzen Kram
 
 
 \begin{enumerate}
    
-    \item \ref{subsubsec:workplacedemocracy_approaches_direct_semco}: Full transparency via online platform
-    \begin{itemize}
-        \item Easily comprehensible business report containing \textbf{all} goals and performance indicators used by the management, updated as frequently as possible
-        \item Allowing for employees to have the same basis of information as the management, contribute more valuable ideas, and get a better understanding for business decisions
-    \end{itemize}
+    % \item \ref{subsubsec:workplacedemocracy_approaches_direct_semco}: Full transparency via online platform
+    % \begin{itemize}
+    %     \item Easily comprehensible business report containing \textbf{all} goals and performance indicators used by the management, updated as frequently as possible
+    %     \item Allowing for employees to have the same basis of information as the management, contribute more valuable ideas, and get a better understanding for business decisions
+    % \end{itemize}
     
     % \item \ref{subsubsec:workplacedemocracy_approaches_direct_10pines}: Salary portal/online requests for higher salary (minor idea)
     
     \item \ref{subsec:digitaldemocracy_aroundtheworld_belohorionte-eparticipatorybudget}: Finance transparency including a participatory budget/ways to suggest different/better use for funds (minor idea)
+    % CHECK noch hinzufügen?
     
     \item \ref{subsubsec:workplacedemocracy_approaches_representative_laborunions} \& \ref{subsec:digitaldemocracy_aroundtheworld_eu-copyright-protest}: Surveying and transparency tools for labor unions
     \begin{itemize}
@@ -983,8 +984,8 @@ In addition to being a knowledge basis for other forms of participation, a platf
         \item Transparent and reliable information about labor conditions such as salary, paid time off, and working hours per industry/company based on optional pseudonymized information submitted by union members
         \item Easier way to organize union-backed strikes or other action
     \end{itemize}
+    % CHECK noch hinzufügen?
     
-    \item 
 
     %\item
     %\ref{subsubsec:workplacedemocracy_approaches_representative_boardlevelcodet} \& \ref{subsubsec:workplacedemocracy_approaches_representative_workplacecodet}: Online portal for a more community-based and more direct representation in workforce codetermination bodies 
@@ -1019,15 +1020,42 @@ In addition to being a knowledge basis for other forms of participation, a platf
 
 \subsection{Intended outcomes for the proposed approaches}
 \label{sec:dwd_intendedoutcomes}
+To examine how valuable Digital Workplace Democracy and a specific approaches are for an organization, it is crucial to first determine what the objective is. The approaches presented in section \ref{sec:dwd_approaches} are just examples, yet they represent the wide variety of possible methods. Not all of these approaches are equally suitable for all objectives.
 
-Not all approaches are suitable for all goals.
-\begin{enumerate}
-    \item Crowd-source better ideas and decisions, and more agreeable goals (premise: all staff is more likely to represent a larger group such as the customers or society at large than just the management board)
+While the real-world goals organizations might have for introducing Digital Workplace Democracy are likely much more nuanced, the following are ideal-typical goals for the approaches:
+
+\begin{enumerate} % Aufteilen nach sozialen und wirtschaftlichen (+ weitere?) Zielen
+
+    \item Crowd-source ideas and business decision: Based on the premise that all staff is likely than the management and/or the boards to represent larger groups such as the customer base or society at large, it can be helpful to enable employees to learn more about business context, proactively offer suggestions, and participate in business decisions in order to make more agreeable and appealing business decisions
+    
+    \item Better workplace: Letting employees decide over their own workplace can be a (social) goal in itself as it arguably changes the workplace their favor, improving the quality of work and therefore also positively impacting the quality of life of employees
+
+    \item Intrinsic motivation: % Robinson 2004
+\end{enumerate} %CHECK vervollständigen und paar weitere nennen
+
+\vfill % CHECK entfernen!
+
+\begin{itemize}
+    % \item Crowd-source better ideas and decisions, and more agreeable goals (premise: all staff is more likely to represent a larger group such as the customers or society at large than just the management board)
     \item \cite{Robinson.2004}: Develop and nurture employee engagement (premise: participation encourages employees to be more aware of the business context, actively think about how to improve the organization, and therefore also works too improve within the job for the benefit of the organization) --> positive effects on performance outcomes
     \item ...
-\end{enumerate}
+\end{itemize}
 
 \subsection{Advantages compared to non-digital participation methods}
+While (digital) democracy in the political realm can clearly not substitute (digital) democracy in the workplace context, the question may be asked why organizations should bother with digital democracy when they could also just hold a paper-based vote, have in-person round tables, or a feedback mailbox.
+
+After all, it can be quite complicated, expensive, and time-consuming to introduce a technology-based solution, especially if it has to be newly developed or modified for an organization's specific requirements.
+
+The following are some advantages of digital participation methods compared to non-digital methods:
+
+\begin{enumerate}
+    \item Location independence: Many organizations nowadays are decentrally organized, ranging from \acrshort{sme}s (\acrlong{sme}s) where some or all employees work from home to large multinational corporations. This would make in-person formats like roundtables or votes (other than mail-in voting) less viable or they would exclude some members of the organization.
+    
+    \item Time flexibility: Non-digital dialog formats in particular are typically synchronous. But any set time will in almost any case be inconvenient to some members of the organization or it is simply not possible to have no employees available for other tasks. Digital formats can -- for instance -- replace traditional \acrshort{qa}s or campaign rallies with a website where questions  can be submitted at any time and all responses are publicly visible (see section \ref{subsec:dwd_approaches_exec-elections}).
+    
+    \item Scalability: While hand-tallying votes is easily viable in small organizations or organizational units, it is 
+\end{enumerate}
+
 make participation less bureaucratic, more manageable and accessible...
 
 \subsection{Indicators for measuring the success of Digital Workplace Democracy}
@@ -1131,6 +1159,8 @@ make participation less bureaucratic, more manageable and accessible...
 \newacronym{snp}{SNP}{Scottish National Party}
 \newacronym{apa}{APA}{American Psychological Association}
 \newacronym{kpi}{KPI}{Key Performance Indicator}
+\newacronym{sme}{SME}{Small and medium-sized enterprise}
+\newacronym{qa}{Q/&A}{Question and Answer}
 
 
 % Bibliography
