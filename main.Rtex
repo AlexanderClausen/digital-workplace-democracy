@@ -1053,8 +1053,8 @@ The following are some advantages of digital participation methods compared to n
     
     \item Time flexibility: Non-digital dialog formats in particular are typically synchronous. But any set time will in almost any case be inconvenient to some members of the organization or it is simply not possible to have no employees available for other tasks. Digital formats can -- for instance -- replace traditional \acrshort{qa}s or campaign rallies with a website where questions  can be submitted at any time and all responses are publicly visible (see section \ref{subsec:dwd_approaches_exec-elections}).
     
-    \item Scalability: While hand-tallying votes is easily viable in small organizations or organizational units, it is 
-\end{enumerate}
+    \item Scalability: While hand-tallying votes or giving feedback in person is easily viable in small organizations or organizational units, it is disproportionately harder to scale manual modes of workplace democracy in large enterprises with many employees, subdivisions, locations, cultures, and languages. Digital tools need to be able to handle these challenges too, for instance in that they must be able to cope with the traffic and are available in all the required languages. But they have the potential to save both time and money and work more efficiently than non-digital alternatives on a large scale.
+\end{enumerate} % CHECK möglicherweise mehr
 
 make participation less bureaucratic, more manageable and accessible...
 
@@ -1063,16 +1063,21 @@ make participation less bureaucratic, more manageable and accessible...
     \item Employee engagement
     % https://www.personio.com/hr-lexicon/measuring-employee-engagement/
     % https://www.gallup.com/workplace/313313/historic-drop-employee-engagement-follows-record-rise.aspx
+    % \cite{Harter.2020} Seite 26
     \begin{itemize}
-        \item Employee happiness score
+        \item Employee happiness score % Zufriedenheit (Better Workpalce)
         \item Qualitative surveying asking employees (anonymously) questions about how they feel about pride, endorsement, motivation, current and future commitment
         \item Turnover rate, early attrition rate, \& absenteeism rate
     \end{itemize}
-    \item Overall performance
+    \item Quantitive performance % Für Ideen-Crowdsourcing
     \begin{itemize}
         \item Industry/company/team-specific productivity rates according to their particular goals (deals closed, measuring output, downtime)
-        \item Quality and customer satisfaction
         \item Financial success (profit, gross margin, revenue/employee)
+    \end{itemize}
+    \item Qualitative performance % Sowohl Ideen-Crowdsourcing als auch Zufriedenheit/Motivation
+    \begin{itemize}
+        \item Quality of service (customer satisfaction)
+        \item Quality of products (quality checks, customer feedback)
     \end{itemize}
     \item Employee participation
     \begin{itemize}
