@@ -1028,12 +1028,11 @@ While the real-world goals organizations might have for introducing Digital Work
 
     \item Crowd-source ideas and business decision: Based on the premise that all staff is likely than the management and/or the boards to represent larger groups such as the customer base or society at large, it can be helpful to enable employees to learn more about business context, proactively offer suggestions, and participate in business decisions in order to make more agreeable and appealing business decisions
     
-    \item Better workplace: Letting employees decide over their own workplace can be a (social) goal in itself as it arguably changes the workplace their favor, improving the quality of work and therefore also positively impacting the quality of life of employees
+    \item Better workplace: Letting employees decide over their own workplace can be a (social) goal in itself as it arguably changes the workplace their favor, improving the quality of work and therefore also positively impacting the quality of life of employees %CHECK auf workplace engagement eingehen
 
     \item Intrinsic motivation: % Robinson 2004
 \end{enumerate} %CHECK vervollständigen und paar weitere nennen
 
-\vfill % CHECK entfernen!
 
 \begin{itemize}
     % \item Crowd-source better ideas and decisions, and more agreeable goals (premise: all staff is more likely to represent a larger group such as the customers or society at large than just the management board)
@@ -1051,7 +1050,7 @@ The following are some advantages of digital participation methods compared to n
 \begin{enumerate}
     \item Location independence: Many organizations nowadays are decentrally organized, ranging from \acrshort{sme}s (\acrlong{sme}s) where some or all employees work from home to large multinational corporations. This would make in-person formats like roundtables or votes (other than mail-in voting) less viable or they would exclude some members of the organization.
     
-    \item Time flexibility: Non-digital dialog formats in particular are typically synchronous. But any set time will in almost any case be inconvenient to some members of the organization or it is simply not possible to have no employees available for other tasks. Digital formats can -- for instance -- replace traditional \acrshort{qa}s or campaign rallies with a website where questions  can be submitted at any time and all responses are publicly visible (see section \ref{subsec:dwd_approaches_exec-elections}).
+    \item Time flexibility: Non-digital dialog formats in particular are typically synchronous. But any set time will in almost any case be inconvenient to some members of the organization or it is simply not possible to have no employees available for other tasks. Digital formats can -- for instance -- replace traditional \acrshort{q+a}s or campaign rallies with a website where questions  can be submitted at any time and all responses are publicly visible (see section \ref{subsec:dwd_approaches_exec-elections}).
     
     \item Scalability: While hand-tallying votes or giving feedback in person is easily viable in small organizations or organizational units, it is disproportionately harder to scale manual modes of workplace democracy in large enterprises with many employees, subdivisions, locations, cultures, and languages. Digital tools need to be able to handle these challenges too, for instance in that they must be able to cope with the traffic and are available in all the required languages. But they have the potential to save both time and money and work more efficiently than non-digital alternatives on a large scale.
 \end{enumerate} % CHECK möglicherweise mehr
@@ -1059,38 +1058,114 @@ The following are some advantages of digital participation methods compared to n
 make participation less bureaucratic, more manageable and accessible...
 
 \subsection{Indicators for measuring the success of Digital Workplace Democracy}
-\begin{enumerate}
-    \item Employee engagement
-    % https://www.personio.com/hr-lexicon/measuring-employee-engagement/
-    % https://www.gallup.com/workplace/313313/historic-drop-employee-engagement-follows-record-rise.aspx
     % \cite{Harter.2020} Seite 26
+\subsubsection{Preliminary notes}
+For this thesis, four main categories of measures with a few example generic key metrics in each of the categories have been identified. These categories and examples are presented and explained in this section. It is important to acknowledge that the relevance and emphasis of each category must be determined in every individual case based on the particular set of goals (\ref{sec:dwd_intendedoutcomes}). Additionally, the specific success indicators have to be specifically adjusted to the requirements of an organization or organizational unit. For example, a charitable non-profit organization would likely measure success differently than a for-profit enterprise, and in a similar manner would a service sector company measure quality differently than a manufacturing company.
+
+\subsubsection{Employee participation indicators}
+    % \item Employee participation % für alles
+    % \begin{itemize}
+    %     \item Participation rate (usage of tools measured by page views/logins/votes/proposals in relation to total employees)
+    %     \item Qualitative surveying (ask employees if they feel well-represented and like they can influence business decisions...)
+    % \end{itemize}
+The first level of metrics is to measure not the effect but the acceptance and penetration of the Digital Workplace Democracy offerings. Only if employees know about and use the opportunities to participate digitally, it can actually affect their workplace. While some categories are only applicable to either one of the two key goals (see section \ref{sec:dwd_intendedoutcomes}), assessing the knowledge about and usage and acceptance of Digital Workplace Democracy tools prior to that is an essential first validation step. Examples on how to measure this basic level are:
+\begin{itemize}
+    \item Anonymous employee interviews
     \begin{itemize}
-        \item Employee happiness score % Zufriedenheit (Better Workpalce)
-        \item Qualitative surveying asking employees (anonymously) questions about how they feel about pride, endorsement, motivation, current and future commitment
-        \item Turnover rate, early attrition rate, \& absenteeism rate
+        \item What would you do if you felt unwell about a management decision or organization policy?
+        \item How well do you feel represented in this organization?
+        \item Do you feel you can have any meaningful influence on important business decisions?
     \end{itemize}
-    \item Quantitive performance % Für Ideen-Crowdsourcing
+    \item Technical metrics recorded in the participatory tools, including
     \begin{itemize}
-        \item Industry/company/team-specific productivity rates according to their particular goals (deals closed, measuring output, downtime)
-        \item Financial success (profit, gross margin, revenue/employee)
+        \item number of page views
+        \item rate of active users among all staff
+        \item turnout (when voting is involved)
     \end{itemize}
-    \item Qualitative performance % Sowohl Ideen-Crowdsourcing als auch Zufriedenheit/Motivation
+\end{itemize}
+
+\subsubsection{Employee engagement and happiness}
+    % \item Employee engagement % Zufriedenheit (Better Workpalce)
+    % % https://www.personio.com/hr-lexicon/measuring-employee-engagement/
+    % % https://www.gallup.com/workplace/313313/historic-drop-employee-engagement-follows-record-rise.aspx
+    % \begin{itemize}
+    %     \item Employee happiness score
+    %     \item Qualitative surveying asking employees (anonymously) questions about how they feel about pride, endorsement, motivation, current and future commitment
+    %     \item Turnover rate, early attrition rate, \& absenteeism rate
+    % \end{itemize}
+If making employees feel better and more comfortable in their workplace by giving them a say is at least part of the intended outcomes (see \ref{sec:dwd_intendedoutcomes}), this category of success metrics is crucial. The purpose is to measure how engaged employees are by asking them engagement-related questions (about pride, endorsement and commitment) and analyzing \acrshort{kpi}s from \acrshort{hr} that are typically associated with employee engagement.
+\begin{itemize}
+    \item Anonymous employee interviews
     \begin{itemize}
-        \item Quality of service (customer satisfaction)
-        \item Quality of products (quality checks, customer feedback)
+        \item Are you proud to work in this organization?
+        \item Do you rather approve or disapprove of the current management of the organization?
+        \item Would you accept a job offer from another company with responsibilities similar to your current role?
+        \item If a close friend considered applying at this organization and asked you to rate it as an employer on a scale from one to ten, what would you rate it?
     \end{itemize}
-    \item Employee participation
+    \item \acrshort{hr} key metrics related to employee engagement and happiness
     \begin{itemize}
-        \item Participation rate (usage of tools measured by page views/logins/votes/proposals in relation to total employees)
-        \item Qualitative surveying (ask employees if they feel well-represented and like they can influence business decisions...)
+        \item Turnover rate
+        \item Early attrition rate
+        \item Absenteeism rate
     \end{itemize}
-    \item work in progress (see \cite{Harter.2020}) % CHECK
-\end{enumerate}
+\end{itemize}
+
+\subsubsection{Quantitative performance}
+    % \item Quantitive performance % Für Ideen-Crowdsourcing
+    % \begin{itemize}
+    %     \item Industry/company/team-specific productivity rates according to their particular goals (deals closed, measuring output, downtime)
+    %     \item Financial success (profit, gross margin, revenue/employee)
+    % \end{itemize}
+Quantitative performance indicators are a key metric group given that one of the intended outcomes (see \ref{sec:dwd_intendedoutcomes}) is to bring about change that improves processes and products by crowd-sourcing ideas or democratizing business decisions.
+The specific metrics should depend on what kind of change is expected. For instance, improvements in the production process would more likely improve the production output while crowd-sourcing innovative and new product ideas would rather increase revenue. The goal of these metrics is to analyze whether the ideas coming out of the Digital Workplace Democracy ultimately affect the organization positively or not. Exemplary \acrshort{kpi}s in this category include:
+
+\begin{itemize}
+    \item Context-specific productivity improvements (by implementing process or investment suggestions)
+    \begin{itemize}
+        \item Number of deals closed in Sales
+        \item Production output
+        \item Downtime or idle time of technical equipment and machinery
+    \end{itemize}
+    \item Financial \acrlong{kpi}s % https://online.hbs.edu/blog/post/financial-performance-measures
+    \begin{itemize}
+        \item Revenue
+        \item Profit margin
+        \item Revenue per organizational unit/employee
+    \end{itemize}
+\end{itemize}
+
+    
+\subsubsection{Qualitative performance}
+    % \item Qualitative performance % Sowohl Ideen-Crowdsourcing als auch Zufriedenheit/Motivation
+    % \begin{itemize}
+    %     \item Quality of service (customer satisfaction)
+    %     \item Quality of products (quality checks, customer feedback)
+    % \end{itemize}
+    % \item work in progress (see \cite{Harter.2020}) % CHECK
+Lastly, qualitative performance indicators are a crucial category that should be measured no matter what the intended outcome is (see \ref{sec:dwd_intendedoutcomes}). It should be considered either a step that improves customer satisfaction and hence customer loyalty -- or a consequence of the (ideally) increased employee engagement for example in the Customer Support, Design, Manufacturing, and \acrlong{qa} departments. Examples for metrics to be used for qualitative performance measuring are:
+
+\begin{itemize}
+    \item Quality testing
+    \begin{itemize}
+        \item Rate of \acrshort{qa} tests passed
+        \item Rate of products returned by customers
+        \item Number of product quality complaints
+    \end{itemize}
+    \item Customer satisfaction % https://blog.totango.com/measuring-customer-loyalty-5-ways/
+    \begin{itemize}
+        \item Customer support quality feedback
+        \item Average online rating of products or the organization at large
+        \item Customer Lifetime Value (amount of money spent by one individual customer overall)
+        \item Customer Loyalty Index % CHECK noch ausführen oder rausnehmen
+    \end{itemize}
+\end{itemize}
+
 
 \chapter{Discussion of the results}
 \section{Conclusion and recommendations for action}
 Übersicht mit Pfaden (bestimmte Ziele -> welche Approaches passen dafür)
 \section{Limitations of the study}
+KPIs werden auch von anderen Faktoren heftig beeinflusst
 \section{Recommendations for further work}
 
 
@@ -1165,8 +1240,8 @@ make participation less bureaucratic, more manageable and accessible...
 \newacronym{apa}{APA}{American Psychological Association}
 \newacronym{kpi}{KPI}{Key Performance Indicator}
 \newacronym{sme}{SME}{Small and medium-sized enterprise}
-\newacronym{qa}{Q/&A}{Question and Answer}
-
+\newacronym{q+a}{Q/&A}{Question and Answer}
+\newacronym{qa}{QA}{Quality Assurance}
 
 % Bibliography
 % CHECK: Ehin & Mihkel falsche DOI (_ wird zu \textunderscore) - nach weiteren Fehlern suchen
