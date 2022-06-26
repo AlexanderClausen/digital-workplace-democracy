@@ -259,7 +259,7 @@
 
 \mainmatter
 \chapter{Introduction} \label{ch:introduction}
-\section{Background of the topic}
+\section{Background of the topic} \label{sec:introduction_background}
 The way we work has been evolving for centuries. Technologies arise, societies change -- and so do economies and labor markets. Labor in advanced Western societies has become significantly more social, global, and digital in the last fifty years alone.
 Major phases in the way labor is conducted and seen in society are often associated with stages of the industrial revolution (\cite{FederalMinistryofLabourandSocialAffairs.2015}, pp. 34 ff.) Looking at the intervals between these phases, change is clearly accelerating. % Grafik/Tabelle
 
@@ -277,22 +277,14 @@ Some organizations apply democratic practices to give employees a voice even bey
 
 % CHECK sections über Problem und/oder Purpose?????
 
-\section{Structure and research questions}
+\section{Structure and research questions} \label{sec:introduction_structure-questions}
 This thesis gives an introduction to both digital democracy and workplace democracy, focusing on their underlying concepts and core ideas, real-world examples, and benefits and challenges they entail. On this basis, the following central research question and sub-questions will be worked on:
 
-\item CQ: \textbf{What is the value of digital participatory measures for organizations based on a framework of criteria?}
+\item CQ: \textbf{What is the value of digital participatory measures for organizations?}
 \begin{itemize}
-    \item SQ 1: What are formal criteria (prerequisites) for organizations and approaches?
-    \item SQ 2: What are potential approaches for Digital Workplace Democracy? (including Digital Democracy approaches applicable to organizational structures, existing Workplace Democracy approaches that can be digitalized, and new possible approaches)
-    \item SQ 3: How valuable are the expected effects for the organization, based on a set of evaluation criteria? (also taking into account the intended outcomes and the comparison to non-digital alternatives)
-    
-    % Sachen in Klammern so lassen???
-    
-    % ALT:
-    % \item SQ 1: Which approaches to workplace democracy can be digitalized?
-    % \item SQ 2: What other forms of digital democracy can be applied or translated to the organizational context?
-    % \item SQ 3: What are criteria to measure the value of digital participatory tools, if applicable in comparison to their non-digital alternatives?
-    % \item SQ 3: What are the expected effects of introducing instruments of Digital Workplace Democracy? (taking into account the intended outcomes and the comparison to non-digital alternatives)
+    \item SQ 1: What are criteria for the successful implementation of Digital Workplace Democracy?
+    \item SQ 2: What are potential approaches for Digital Workplace Democracy that can be concluded from Digital Democracy in the political realm or from non-digital Workplace Democracy?
+    \item SQ 3: How valuable are the expected effects for the organization, based on a set of evaluation criteria?
 \end{itemize}
 
 Finally, these results will be summarized in the form of recommendations for action for organization executives and further discussed regarding its limitations and suggestions for further research to be conducted for more conclusive results.
@@ -1163,9 +1155,40 @@ Lastly, qualitative performance indicators are a crucial category that should be
 
 \chapter{Discussion of the results}
 \section{Conclusion and recommendations for action}
-Übersicht mit Pfaden (bestimmte Ziele -> welche Approaches passen dafür)
+% Übersicht mit Pfaden (bestimmte Ziele -> welche Approaches passen dafür)
+In section \ref{sec:introduction_structure-questions}, the research question has been defined and sub-divided into three sub-questions (SQ 1-3) aimed to answer the question systematically:
+
+\item CQ: \textbf{What is the value of digital participatory measures for organizations?}
+\begin{itemize}
+    \item SQ 1: What are potential objectives organizations can achieve through Digital Workplace Democracy?
+    \item SQ 2: What are criteria for the successful implementation of Digital Workplace Democracy?
+    \item SQ 3: What are potential approaches for Digital Workplace Democracy that can be concluded from Digital Democracy in the political realm or from non-digital Workplace Democracy?
+    \item SQ 4: What are gains and challenges of Digital Workplace Democracy?
+    \item SQ 5: How valuable are the expected effects for the organization, based on a set of evaluation criteria?
+\end{itemize} %CHECK abgleichen mit obem
+
+In this section, the  three sub-questions are answered based on conclusions the results of this thesis. These conclusions and other complementary findings are presented in the form of recommendations for action for organizations considering to introduce Digital Workplace Democracy for their employees. Subsequently, a conclusion of the overall results to the central research questions is drawn.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{Conclusion_action-plan.png}
+    \caption{Visualization of the implementation process for Digital Workplace Democracy as used to present the results of this thesis.}
+    \label{fig:discussion_conclusion_implementation-process}
+\end{figure}
+
+
+
+    % Recc for Action: Prozessdarstellung
+    %     Abwägung (SQ 1 -> Voraussetzungen checken, macht es Sinn, groß genug, genug Technikwissen usw, ist man bereit Verantwortung abzugeben etc.)
+    %     Zielsetzung (SQ
+    %     Planung (SQ2, welche Methoden, bei wem in Auftrag, werden Kriterien erfüllt wie Vertrauen, Datensicherheit usw)
+    %     Durchführung (Kosten, transparente Kommunikation, Feedback Prozesse)
+    %     Monitoring (SQ3)
+        
+    
+
 \section{Limitations of the study}
-KPIs werden auch von anderen Faktoren heftig beeinflusst
+% KPIs werden auch von anderen Faktoren heftig beeinflusst
 \section{Recommendations for further work}
 
 
