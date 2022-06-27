@@ -280,11 +280,20 @@ Some organizations apply democratic practices to give employees a voice even bey
 \section{Structure and research questions} \label{sec:introduction_structure-questions}
 This thesis gives an introduction to both digital democracy and workplace democracy, focusing on their underlying concepts and core ideas, real-world examples, and benefits and challenges they entail. On this basis, the following central research question and sub-questions will be worked on:
 
-\item CQ: \textbf{What is the value of digital participatory measures for organizations?}
+% \item CQ: \textbf{What is the value of digital participatory measures for organizations?}
+% \begin{itemize}
+%     \item SQ 1: What are criteria for the successful implementation of Digital Workplace Democracy?
+%     \item SQ 2: What are potential approaches for Digital Workplace Democracy that can be concluded from Digital Democracy in the political realm or from non-digital Workplace Democracy?
+%     \item SQ 3: How valuable are the expected effects for the organization, based on a set of evaluation criteria?
+% \end{itemize}
+
+\item \acrshort{cq}: \textbf{What is the value of digital participatory measures for organizations?}
 \begin{itemize}
-    \item SQ 1: What are criteria for the successful implementation of Digital Workplace Democracy?
-    \item SQ 2: What are potential approaches for Digital Workplace Democracy that can be concluded from Digital Democracy in the political realm or from non-digital Workplace Democracy?
-    \item SQ 3: How valuable are the expected effects for the organization, based on a set of evaluation criteria?
+    \item \acrshort{sq} 1: What are advantages and disadvantages of Digital Workplace Democracy?
+    \item \acrshort{sq} 2: What are criteria for the successful implementation of Digital Workplace Democracy?
+    \item \acrshort{sq} 3: What are potential objectives of introducing Digital Workplace Democracy?
+    \item \acrshort{sq} 4: What are potential approaches for Digital Workplace Democracy that can be concluded from Digital Democracy in the political realm or from non-digital Workplace Democracy?
+    \item \acrshort{sq} 5: How valuable are the expected effects for the organization, based on a set of evaluation criteria?
 \end{itemize}
 
 Finally, these results will be summarized in the form of recommendations for action for organization executives and further discussed regarding its limitations and suggestions for further research to be conducted for more conclusive results.
@@ -455,7 +464,7 @@ One of the core goals of digital democracy is to enable citizens to directly par
 Despite the variety of positive effects that can improve democratic systems, digital democracy also entails a number of severe challenges. The most pressing challenges are:
 
 \subsection{Digital divide} \label{subsec:digitaldemocracy_challenges_digitaldivide} % inequal access to ICT, inequal IT literacy
-% 978-1-5095-3446-3
+% 978-1-5095-3446-3 
 The term \textit{digital divide} can be defined as \enquote{a division between people who have access and use of digital media and those who do not} (\cite{Bonfadelli.2002}). This includes a gap in access to \acrshort{ict} and particularly the internet, consisting of both technical (i.e. the availability of broadband) and social (i.e. professional knowledge, economic ressources, and technical skills required for effectual use) access (Kling 1999 via \cite{Wei.2011}).
 
 Many parts of the world have insufficient access to \acrshort{ict} which manifests in an extreme disparity in the percentage per country of individuals using the internet. As visualized in Figure \ref{fig:digitaldemocracy_challenges_MapInternetUsers}, the percentage of internet users is considerably lower in most developing countries than in developed countries. Most notably, the percentage of internet users of the the population in Sub-Saharan Africa is 18.7\% compared to 88.5\% in North America (\cite{WorldBankGroup.2019}). 
@@ -830,7 +839,9 @@ The core idea of Digital Workplace Democracy is to gather ideas and established 
 \subsection{Preconditions for a responsible initial implementation of Digital Workplace Democracy} \label{subsec:dwd_applicability_preconditions}
 
 \subsubsection{Legal requirements} \label{subsubsec:dwd_applicability_preconditions_legal}
-    \item Legal requirements (e.g. share salary to be able to negotiate it democratically) % CHECK
+The first requirement is to check the legal framework in the country's corresponding country. For instance, an approach like the democratic salary negotiations presented in section \ref{subsubsec:workplacedemocracy_approaches_direct_10pines} -- regardless of whether it is digitalized or not -- requires that all salaries or at least a ranking of salaries are disclosed within the company. Sharing sensitive information like this is highly regulated in some countries including the \acrshort{eu} and needs to be checked.
+
+Another example is IT privacy where companies are required to adhere to certain security and privacy standards. Multinational organizations may face an additional challenging situation in some cases as laws differ between countries and could be contradicting although a unified election platform hosted in one country may be technologically necessary. These fringe cases must be figured out beforehand.
 
 \subsubsection{Technical requirements} \label{subsubsec:dwd_applicability_preconditions_technical}
 One key factor to responsibly implementing Digital Workplace Democracy measures is to have reliable tools at hand. Whether it is a system for digital voting or for anonymous feedback inside an organization, the minimum requirement is a system that can ensure the security and anonymity of participating where it is provided by design. It must therefore be
@@ -867,22 +878,23 @@ Lastly, a high level of trust in the e-democracy systems is also crucial. For th
 % \end{figure}
 
 
-\subsection{Factors contributing to a successful transition to Digital Workplace Democracy}
-\subsubsection{Proper size of the democratic entity}
+\subsection{Factors contributing to a successful transition to Digital Workplace Democracy} \label{subsec:dwd_applicability_factors}
+\subsubsection{Proper size of the democratic entity} \label{subsubsec:dwd_applicability_factors_size}
 For some approaches to digital workplace democracy, the entirety of an organization must be considered. For example, if a committee is to be established that would represent employee interests against the management or shareholders on the organization-wide level, or if top-level executives like the CEO are elected in a direct-democratic manner. However, being only a single vote out of thousands of employees in some large enterprises could for some feel just as small and meaningless as in a national election. Casting this vote in just a few clicks might add to this issue.
 
 Other democratic approaches can only function in a comparably unit. For example, employees interviewing and approving future superordinates as done at Semco (see section \ref{subsubsec:workplacedemocracy_approaches_direct_semco}) or democratic setting of salaries like at 10Pines (see section \ref{subsubsec:workplacedemocracy_approaches_direct_10pines}) are only possible in small organizations or in sub-divided teams. Ricardo \textcite{Semler.1989} concludes that \enquote{it’s clear that several thousand people in one facility makes individual involvement an illusion.}
 
-\subsubsection{Degree of participation}
+\subsubsection{Degree of participation} \label{subsubsec:dwd_applicability_factors_participation-degree}
 It is quite obvious that low levels of participation makes most (digital) democratic tools redundant. Low participation would translate to an equally low level of democratic legitimization of the decisions made. It could be a sign that the approach is not accessible, trusted, or accepted by the workforce (see section \ref{subsec:dwd_applicability_preconditions}). In addition to most likely not reaching the intended goals, it could also be regarded as an attempt to appear more democratic and employee-friendly in the public eye.
 
 However, a very high level of participation can also be negative as it may be hard to manage, i.e. uncontrollable democratic decisions can make it hard for corporate leadership to steer the organization towards aligning with strategic goals or any coherent path.
 
-\subsubsection{Changeability of the organization}
-As implied in section \ref{subsubsec:dwd_applicability_preconditions_social}, all parties involved in the organization need to at the very least accept the proposed organizational shift towards digital workplace democracy. Most crucially, this includes the workforce, the management, and shareholders. A higher level of support, however, will lead to higher motivation to adapt the change and immerse in the new culture of democratic participation. Regardless of the intended outcome (see section \ref{sec:dwd_intendedoutcomes}) and the specific approach or approaches (see section \ref{sec:dwd_approaches}), this should always be the encouraged.
+\subsubsection{Changeability of the organization} \label{subsubsec:dwd_applicability_factors_changeability}
+As implied in section \ref{subsubsec:dwd_applicability_preconditions_social}, all parties involved in the organization need to at the very least accept the proposed organizational shift towards digital workplace democracy. Most crucially, this includes the workforce, the management, and shareholders. A higher level of support, however, will lead to higher motivation to adapt the change and immerse in the new culture of democratic participation. Regardless of the intended outcome (see section \ref{subsec:dwd_intendedoutcomes}) and the specific approach or approaches (see section \ref{sec:dwd_approaches}), this should always be the encouraged.
 
 Therefore, the readiness of the organization to change can be a major determinant of the level of success of such an endeavor. Just as importantly, the least supportive of the central stakeholder groups -- workforce, management, shareholders -- could alone disrupt the success of the effort: The workforce can simply participate less, shareholders may have the power to block the implementation before it happens, and managers can either diminish the granted level of participation or the public image of the effort by denigrating it.
-% Wiederholung von Preconditions - passt das hier her?
+% CHECK Wiederholung von Preconditions - passt das hier her?
+% CHECK Kommunikationsstrategie
 
 
 \begin{itemize}
@@ -1011,28 +1023,23 @@ In addition to being a knowledge basis for other forms of participation, a platf
 % SQ 3
 
 \subsection{Intended outcomes for the proposed approaches}
-\label{sec:dwd_intendedoutcomes}
-To examine how valuable Digital Workplace Democracy and a specific approaches are for an organization, it is crucial to first determine what the objective is. The approaches presented in section \ref{sec:dwd_approaches} are just examples, yet they represent the wide variety of possible methods. Not all of these approaches are equally suitable for all objectives.
+\label{subsec:dwd_intendedoutcomes}
+To examine how valuable Digital Workplace Democracy and a specific approaches are for an organization, it is crucial to first determine what the objective is. The approaches presented in section \ref{sec:dwd_approaches} are just examples, yet they represent the wide variety of possible methods. Not all of these approaches are equally suitable for both objectives.
 
-While the real-world goals organizations might have for introducing Digital Workplace Democracy are likely much more nuanced, the following are ideal-typical goals for the approaches:
+While the real-world goals organizations might have for introducing Digital Workplace Democracy are likely much more nuanced, the two core goals for the scope of this thesis are:
 
-\begin{enumerate} % Aufteilen nach sozialen und wirtschaftlichen (+ weitere?) Zielen
-
-    \item Crowd-source ideas and business decision: Based on the premise that all staff is likely than the management and/or the boards to represent larger groups such as the customer base or society at large, it can be helpful to enable employees to learn more about business context, proactively offer suggestions, and participate in business decisions in order to make more agreeable and appealing business decisions
+\begin{enumerate}
+    % Employee happiness
+    \item Social goals: Letting employees decide over their own workplace can be a (social) goal in itself. It arguably changes the workplace to their favor, improving the quality of work and therefore also positively impacting the quality of life of employees. A strong degree of employee participation improves employee engagement, meaning an employee's relationship with and attitude towards their workplace. Although this might improve their willingness to intrinsically bring up ideas or work harder which may also have economic benefits, the goal here is simply for the employees to happier. %CHECK Quelle für employee engagement
     
-    \item Better workplace: Letting employees decide over their own workplace can be a (social) goal in itself as it arguably changes the workplace their favor, improving the quality of work and therefore also positively impacting the quality of life of employees %CHECK auf workplace engagement eingehen
+    % Organizational result
+    \item Economic goals: The other way to look at Digital Workplace Democracy is that it has the potential to improve business results. Based on the premise that all staff is likely than the management and/or the boards to represent larger groups such as the customer base or society at large, it can be helpful to enable employees to learn more about business context, proactively offer suggestions, and participate in business decisions in order to make more agreeable and appealing business decisions. In a broader sense, giving employees a stronger voice in decisions can improve employee engagement and therefore the employees' performance.
 
-    \item Intrinsic motivation: % Robinson 2004
-\end{enumerate} %CHECK vervollständigen und paar weitere nennen
+\end{enumerate}
 
-
-\begin{itemize}
-    % \item Crowd-source better ideas and decisions, and more agreeable goals (premise: all staff is more likely to represent a larger group such as the customers or society at large than just the management board)
-    \item \cite{Robinson.2004}: Develop and nurture employee engagement (premise: participation encourages employees to be more aware of the business context, actively think about how to improve the organization, and therefore also works too improve within the job for the benefit of the organization) --> positive effects on performance outcomes
-    \item ...
-\end{itemize}
 
 \subsection{Advantages compared to non-digital participation methods}
+\label{subsec:dwd_evaluation_advantages}
 While (digital) democracy in the political realm can clearly not substitute (digital) democracy in the workplace context, the question may be asked why organizations should bother with digital democracy when they could also just hold a paper-based vote, have in-person round tables, or a feedback mailbox.
 
 After all, it can be quite complicated, expensive, and time-consuming to introduce a technology-based solution, especially if it has to be newly developed or modified for an organization's specific requirements.
@@ -1047,12 +1054,25 @@ The following are some advantages of digital participation methods compared to n
     \item Scalability: While hand-tallying votes or giving feedback in person is easily viable in small organizations or organizational units, it is disproportionately harder to scale manual modes of workplace democracy in large enterprises with many employees, subdivisions, locations, cultures, and languages. Digital tools need to be able to handle these challenges too, for instance in that they must be able to cope with the traffic and are available in all the required languages. But they have the potential to save both time and money and work more efficiently than non-digital alternatives on a large scale.
 \end{enumerate} % CHECK möglicherweise mehr
 
-make participation less bureaucratic, more manageable and accessible...
+In addition to these comparative advantages, all the benefits identified in section \ref{sec:digitaldemocracy_gains} for Digital Democracy and in section \ref{sec:workplacedemocracy_arguments} also apply to Digital Workplace Democracy.
 
-\subsection{Indicators for measuring the success of Digital Workplace Democracy}
+\subsection{Disadvantages of Digital Workplace Democracy}
+\label{subsec:dwd_evaluation_disadvantages}
+Similar to the advantages, the disadvantages contain all the factors found in sections \ref{sec:digitaldemocracy_challenges} and \ref{sec:workplacedemocracy_issues} for Digital Democracy and Workplace Democracy, respectively. Additionally, there are more disadvantages that need to be taken into consideration:
+
+\begin{enumerate}
+    \item Costs and long development time: While market-proven solutions for elections and votes are already available, many cases will likely require at least a fair amount of customization of the solutions to case-specific requirements (who is eligible to vote, multiple elections at the same time with different electorates, branding, and security and privacy requirements are just a few examples). In many other cases, including most of those presented in section \ref{sec:dwd_approaches}, an entirely new solution must be developed, coming along with a considerable amount of development time and costs.
+
+    \item Not suitable for all organizations: The high costs and long development time are certainly more of a barrier for \acrshort{sme}s or non-profit organizations than for large enterprises. But even besides that, Digital Workplace Democracy is not equally suitable for all organizations. While formats like round-tables, a feedback mailbox, or informal in-person votes are simply not feasible for large enterprises with many employees, maybe even based decentrally, they are more likely to be perfectly sufficient in smaller organizations where developing an online platform for participation could even be seen as over-engineered or unnecessarily impersonal.
+
+    \item Failure potential: There is also a considerable risk of an Digital Workplace Democracy project to fail. Even if all the prerequisites (see section \ref{subsec:dwd_applicability_preconditions}) and success factors (see section \ref{subsec:dwd_applicability_factors}) seem good, there is basically no empirical data on how successful Digital Workplace Democracy is or can be. Therefore, organizations need be aware of a high risk of failure.
+\end{enumerate}
+
+\subsection{Metrics for measuring the success of Digital Workplace Democracy}
+\label{subsec:dwd_evaluation_kpis}
     % \cite{Harter.2020} Seite 26
 \subsubsection{Preliminary notes}
-For this thesis, four main categories of measures with a few example generic key metrics in each of the categories have been identified. These categories and examples are presented and explained in this section. It is important to acknowledge that the relevance and emphasis of each category must be determined in every individual case based on the particular set of goals (\ref{sec:dwd_intendedoutcomes}). Additionally, the specific success indicators have to be specifically adjusted to the requirements of an organization or organizational unit. For example, a charitable non-profit organization would likely measure success differently than a for-profit enterprise, and in a similar manner would a service sector company measure quality differently than a manufacturing company.
+For this thesis, four main categories of measures with a few example generic key metrics in each of the categories have been identified. These categories and examples are presented and explained in this section. It is important to acknowledge that the relevance and emphasis of each category must be determined in every individual case based on the particular set of goals (\ref{subsec:dwd_intendedoutcomes}). Additionally, the specific success indicators have to be specifically adjusted to the requirements of an organization or organizational unit. For example, a charitable non-profit organization would likely measure success differently than a for-profit enterprise, and in a similar manner would a service sector company measure quality differently than a manufacturing company.
 
 \subsubsection{Employee participation indicators}
     % \item Employee participation % für alles
@@ -1060,15 +1080,15 @@ For this thesis, four main categories of measures with a few example generic key
     %     \item Participation rate (usage of tools measured by page views/logins/votes/proposals in relation to total employees)
     %     \item Qualitative surveying (ask employees if they feel well-represented and like they can influence business decisions...)
     % \end{itemize}
-The first level of metrics is to measure not the effect but the acceptance and penetration of the Digital Workplace Democracy offerings. Only if employees know about and use the opportunities to participate digitally, it can actually affect their workplace. While some categories are only applicable to either one of the two key goals (see section \ref{sec:dwd_intendedoutcomes}), assessing the knowledge about and usage and acceptance of Digital Workplace Democracy tools prior to that is an essential first validation step. Examples on how to measure this basic level are:
+The first level of metrics is to measure not the effect but the acceptance and penetration of the Digital Workplace Democracy offerings. Only if employees know about and use the opportunities to participate digitally, it can actually affect their workplace. While some categories are only applicable to either one of the two key goals (see section \ref{subsec:dwd_intendedoutcomes}), assessing the knowledge about and usage and acceptance of Digital Workplace Democracy tools prior to that is an essential first validation step. Examples on how to measure this basic level are:
 \begin{itemize}
-    \item Anonymous employee interviews
+    \item Anonymous employee surveys
     \begin{itemize}
         \item What would you do if you felt unwell about a management decision or organization policy?
         \item How well do you feel represented in this organization?
         \item Do you feel you can have any meaningful influence on important business decisions?
     \end{itemize}
-    \item Technical metrics recorded in the participatory tools, including
+    \item Technical usage metrics recorded in the participatory tools, including
     \begin{itemize}
         \item number of page views
         \item rate of active users among all staff
@@ -1085,9 +1105,9 @@ The first level of metrics is to measure not the effect but the acceptance and p
     %     \item Qualitative surveying asking employees (anonymously) questions about how they feel about pride, endorsement, motivation, current and future commitment
     %     \item Turnover rate, early attrition rate, \& absenteeism rate
     % \end{itemize}
-If making employees feel better and more comfortable in their workplace by giving them a say is at least part of the intended outcomes (see \ref{sec:dwd_intendedoutcomes}), this category of success metrics is crucial. The purpose is to measure how engaged employees are by asking them engagement-related questions (about pride, endorsement and commitment) and analyzing \acrshort{kpi}s from \acrshort{hr} that are typically associated with employee engagement.
+If making employees feel better and more comfortable in their workplace by giving them a say is at least part of the intended outcomes (see \ref{subsec:dwd_intendedoutcomes}), this category of success metrics is crucial. The purpose is to measure how engaged employees are by asking them engagement-related questions (about pride, endorsement and commitment) and analyzing \acrshort{kpi}s from \acrshort{hr} that are typically associated with employee engagement.
 \begin{itemize}
-    \item Anonymous employee interviews
+    \item Anonymous employee surveys
     \begin{itemize}
         \item Are you proud to work in this organization?
         \item Do you rather approve or disapprove of the current management of the organization?
@@ -1108,11 +1128,11 @@ If making employees feel better and more comfortable in their workplace by givin
     %     \item Industry/company/team-specific productivity rates according to their particular goals (deals closed, measuring output, downtime)
     %     \item Financial success (profit, gross margin, revenue/employee)
     % \end{itemize}
-Quantitative performance indicators are a key metric group given that one of the intended outcomes (see \ref{sec:dwd_intendedoutcomes}) is to bring about change that improves processes and products by crowd-sourcing ideas or democratizing business decisions.
+Quantitative performance indicators are a key metric group given that one of the intended outcomes (see \ref{subsec:dwd_intendedoutcomes}) is to bring about change that improves processes and products by crowd-sourcing ideas or democratizing business decisions.
 The specific metrics should depend on what kind of change is expected. For instance, improvements in the production process would more likely improve the production output while crowd-sourcing innovative and new product ideas would rather increase revenue. The goal of these metrics is to analyze whether the ideas coming out of the Digital Workplace Democracy ultimately affect the organization positively or not. Exemplary \acrshort{kpi}s in this category include:
 
 \begin{itemize}
-    \item Context-specific productivity improvements (by implementing process or investment suggestions)
+    \item Context-specific productivity improvement indicators (from implementing process or investment suggestions)
     \begin{itemize}
         \item Number of deals closed in Sales
         \item Production output
@@ -1134,7 +1154,7 @@ The specific metrics should depend on what kind of change is expected. For insta
     %     \item Quality of products (quality checks, customer feedback)
     % \end{itemize}
     % \item work in progress (see \cite{Harter.2020}) % CHECK
-Lastly, qualitative performance indicators are a crucial category that should be measured no matter what the intended outcome is (see \ref{sec:dwd_intendedoutcomes}). It should be considered either a step that improves customer satisfaction and hence customer loyalty -- or a consequence of the (ideally) increased employee engagement for example in the Customer Support, Design, Manufacturing, and \acrlong{qa} departments. Examples for metrics to be used for qualitative performance measuring are:
+Lastly, qualitative performance indicators are a crucial category that should be measured no matter what the intended outcome is (see \ref{subsec:dwd_intendedoutcomes}). It should be considered either a step that improves customer satisfaction and hence customer loyalty -- or a consequence of the (ideally) increased employee engagement for example in the Customer Support, Design, Manufacturing, and \acrlong{qa} departments. Examples for metrics to be used for qualitative performance measuring are:
 
 \begin{itemize}
     \item Quality testing
@@ -1154,27 +1174,53 @@ Lastly, qualitative performance indicators are a crucial category that should be
 
 
 \chapter{Discussion of the results}
+\label{ch:discussion}
+
 \section{Conclusion and recommendations for action}
-% Übersicht mit Pfaden (bestimmte Ziele -> welche Approaches passen dafür)
-In section \ref{sec:introduction_structure-questions}, the research question has been defined and sub-divided into three sub-questions (SQ 1-3) aimed to answer the question systematically:
-
-\item CQ: \textbf{What is the value of digital participatory measures for organizations?}
-\begin{itemize}
-    \item SQ 1: What are potential objectives organizations can achieve through Digital Workplace Democracy?
-    \item SQ 2: What are criteria for the successful implementation of Digital Workplace Democracy?
-    \item SQ 3: What are potential approaches for Digital Workplace Democracy that can be concluded from Digital Democracy in the political realm or from non-digital Workplace Democracy?
-    \item SQ 4: What are gains and challenges of Digital Workplace Democracy?
-    \item SQ 5: How valuable are the expected effects for the organization, based on a set of evaluation criteria?
-\end{itemize} %CHECK abgleichen mit obem
-
-In this section, the  three sub-questions are answered based on conclusions the results of this thesis. These conclusions and other complementary findings are presented in the form of recommendations for action for organizations considering to introduce Digital Workplace Democracy for their employees. Subsequently, a conclusion of the overall results to the central research questions is drawn.
+\label{sec:discussion_conclusion}
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{Conclusion_action-plan.png}
     \caption{Visualization of the implementation process for Digital Workplace Democracy as used to present the results of this thesis.}
     \label{fig:discussion_conclusion_implementation-process}
-\end{figure}
+\end{figure} % CHECK location
+
+In section \ref{sec:introduction_structure-questions}, the research question has been defined and sub-divided into five sub-questions (SQ) aimed to answer the question systematically. These five sub-questions have been analyzed in detail in the previous sections and will be summarized in this section in a logical order for implementation efforts. Hence, figure \ref{fig:discussion_conclusion_implementation-process} shows the order in which business executives should look at and work on Digital Workplace Democracy. These steps are synchronized to the order of the sub-questions listed before.
+
+\begin{enumerate}
+    \item Weigh up advantages and disadvantages: \acrshort{sq} 1 -- What are advantages and disadvantages of Digital Workplace Democracy? (see section \ref{subsec:dwd_evaluation_advantages} for advantages and section \ref{subsec:dwd_evaluation_disadvantages} for disadvantages)
+    
+    \item Analyze suitability: \acrshort{sq} 2 -- What are criteria for the successful implementation of Digital Workplace Democracy? (see section \ref{subsec:dwd_applicability_preconditions} for hard preconditions and section \ref{subsec:dwd_applicability_factors} for factors that could influence the level of success)
+    
+    \item Set goals: \acrshort{sq} 3 -- What are potential objectives of introducing Digital Workplace Democracy? (see section \ref{subsec:dwd_intendedoutcomes})
+    
+    \item Plan the approach: \acrshort{sq} 4 -- What are potential approaches for Digital Workplace Democracy that can be concluded from Digital Democracy in the political realm or from non-digital Workplace Democracy? (see section \ref{sec:dwd_approaches})
+    
+    \item Monitor the success: \acrshort{sq} 5 -- How valuable are the expected effects for the organization, based on a set of evaluation criteria? (see section \ref{subsec:dwd_evaluation_kpis})
+\end{enumerate}
+
+% \item \acrshort{cq}: \textbf{What is the value of digital participatory measures for organizations?}
+% \begin{itemize}
+%     \item \acrshort{sq} 1: What are advantages and disadvantages of Digital Workplace Democracy?
+%     \item \acrshort{sq} 2: What are criteria for the successful implementation of Digital Workplace Democracy?
+%     \item \acrshort{sq} 3: What are potential objectives of introducing Digital Workplace Democracy?
+%     \item \acrshort{sq} 4: What are potential approaches for Digital Workplace Democracy that can be concluded from Digital Democracy in the political realm or from non-digital Workplace Democracy?
+%     \item \acrshort{sq} 5: How valuable are the expected effects for the organization, based on a set of evaluation criteria?
+% \end{itemize}
+
+A one-page summary featuring a tabular overview of the research results to all these sub-questions can additionally be found in figure \ref{fig:discussion_conclusion_overview}. This overview can be used as an orientation for business executives interested in implementing  The tabular overview also shows the relationship between the goal (\acrshort{sq} 3) and \acrshort{sq}s 4 and 5 as it affects which approaches and metrics are suitable for only social, only economic, or for both goals.
+
+Ultimately, the \acrlong{cq} -- \enquote{\textbf{What is the value of digital participatory measures for organizations?}} -- cannot be answered with certainty. However, the thesis successfully identified many arguments supporting and opposing both Digital Democracy in the political realm as well as Workplace Democracy. If the requirements in section \ref{subsec:dwd_applicability_preconditions} are met and the success factors identified in section \ref{subsec:dwd_applicability_factors} also favor Digital Workplace Democracy, most of the disadvantages and challenges (see \ref{fig:discussion_conclusion_overview}) are addressed. Although there is no reason to believe that the advantages and disadvantages of Digital Democracy and Workplace Democracy do not apply to Digital Workplace Democracy, there is no empirical evidence for the success of such measures specifically. Hence, refer to the last point in section \ref{subsec:dwd_evaluation_disadvantages} (\enquote{Substantial failure potential}) and to sections \ref{sec:discussion_limitations} and \ref{sec:discussion_furtherwork}.
+
+% CHECK size success factor too small (too formalized)
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{SQ-Overview.png}
+    \caption{One-page overview of all the sub-question results, visualized tabularly.}
+    \label{fig:discussion_conclusion_overview}
+\end{figure} % CHECK location
 
 
 
@@ -1188,9 +1234,12 @@ In this section, the  three sub-questions are answered based on conclusions the 
     
 
 \section{Limitations of the study}
+\label{sec:discussion_limitations}
 % KPIs werden auch von anderen Faktoren heftig beeinflusst
-\section{Recommendations for further work}
 
+
+\section{Recommendations for further work}
+\label{sec:discussion_furtherwork}
 
 
 % CQ: How valuable are the identified digital participatory measures for organizations based on a framework of criteria?
@@ -1265,6 +1314,8 @@ In this section, the  three sub-questions are answered based on conclusions the 
 \newacronym{sme}{SME}{Small and medium-sized enterprise}
 \newacronym{q+a}{Q/&A}{Question and Answer}
 \newacronym{qa}{QA}{Quality Assurance}
+\newacronym{sq}{SQ}{Sub-question}
+\newacronym{cq}{CQ}{Central research question}
 
 % Bibliography
 % CHECK: Ehin & Mihkel falsche DOI (_ wird zu \textunderscore) - nach weiteren Fehlern suchen
