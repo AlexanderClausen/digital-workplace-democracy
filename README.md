@@ -4,7 +4,7 @@ This is my capstone thesis for the program *Business Administration – Digital 
 ## Repository structure
 - The original LaTeX file and BibLaTeX file are in the main directory
 - All images implemented are located in the [images](images) directory
-- Both final submissions - meaning the compiled thesis and the presetation (in German) for the colloquium in PDF format - are stored in the [Submission](Submission) directory
+- Both final submissions - meaning the compiled thesis and the presentation (in German) for the colloquium in PDF format - are stored in the [Submission](Submission) directory
 - The PPTX files of the colloquium presentation and an unused longer version are located in the [Presentation](Presentation) directory
 
 ## Abstract
